@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.html).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+
+<!-- Search Engine Optimization by Rank Math - https://s.rankmath.com/home -->
+<title>Quietum Plus™ - (Official) | Best Hearing Health Supplement</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Jost%3A400%2C%2C500&amp;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A400%2C%2C500&amp;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A400%2C%2C500&amp;display=swap" /></noscript>
+<meta name="description" content="Quietum Plus is a hearing health supplement that can help you along with your hearing health. This mixture contains nutritious ingredients that can"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Quietum Plus™ - (Official) | Best Hearing Health Supplement" />
+<meta property="og:description" content="Quietum Plus is a hearing health supplement that can help you along with your hearing health. This mixture contains nutritious ingredients that can" />
+<meta property="og:url" content="index.html" />
+<meta property="og:site_name" content="Quietum Plus™" />
+<meta property="og:updated_time" content="2023-04-19T20:22:43+00:00" />
+<meta property="article:published_time" content="2022-11-13T22:21:26+00:00" />
+<meta property="article:modified_time" content="2023-04-19T20:22:43+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Quietum Plus™ - (Official) | Best Hearing Health Supplement" />
+<meta name="twitter:description" content="Quietum Plus is a hearing health supplement that can help you along with your hearing health. This mixture contains nutritious ingredients that can" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="admin" />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="10 minutes" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["HealthAndBeautyBusiness","Organization"],"@id":"https://www.quietumplusi.com/#organization","name":"Quietum Plus\u2122","url":"https://www.quietumplusi.com","logo":{"@type":"ImageObject","@id":"https://www.quietumplusi.com/#logo","url":"https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp","contentUrl":"https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp","caption":"Quietum Plus\u2122","inLanguage":"en-US","width":"186","height":"40"},"openingHours":["Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"],"image":{"@id":"https://www.quietumplusi.com/#logo"}},{"@type":"WebSite","@id":"https://www.quietumplusi.com/#website","url":"https://www.quietumplusi.com","name":"Quietum Plus\u2122","alternateName":"Quietum Plus\u2122","publisher":{"@id":"https://www.quietumplusi.com/#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://www.quietumplusi.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus.webp","url":"https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus.webp","width":"200","height":"200","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.quietumplusi.com/#webpage","url":"https://www.quietumplusi.com/","name":"Quietum Plus\u2122 - (Official) | Best Hearing Health Supplement","datePublished":"2022-11-13T22:21:26+00:00","dateModified":"2023-04-19T20:22:43+00:00","about":{"@id":"https://www.quietumplusi.com/#organization"},"isPartOf":{"@id":"https://www.quietumplusi.com/#website"},"primaryImageOfPage":{"@id":"https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus.webp"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.quietumplusi.com/author/admin_gduua52p/","name":"admin","url":"https://www.quietumplusi.com/author/admin_gduua52p/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/5a418ea46d87be0b7fcd22fb675f42d5?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/5a418ea46d87be0b7fcd22fb675f42d5?s=96&amp;d=mm&amp;r=g","caption":"admin","inLanguage":"en-US"},"sameAs":["https://www.quietumplusi.com"],"worksFor":{"@id":"https://www.quietumplusi.com/#organization"}},{"@type":"Article","headline":"Quietum Plus\u2122 - (Official) | Best Hearing Health Supplement","keywords":"quietum plus","datePublished":"2022-11-13T22:21:26+00:00","dateModified":"2023-04-19T20:22:43+00:00","author":{"@id":"https://www.quietumplusi.com/author/admin_gduua52p/","name":"admin"},"publisher":{"@id":"https://www.quietumplusi.com/#organization"},"description":"Quietum Plus is a hearing health supplement that can help you along with your hearing health. This mixture contains nutritious ingredients that can","name":"Quietum Plus\u2122 - (Official) | Best Hearing Health Supplement","@id":"https://www.quietumplusi.com/#richSnippet","isPartOf":{"@id":"https://www.quietumplusi.com/#webpage"},"image":{"@id":"https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus.webp"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.quietumplusi.com/#webpage"}}]}</script>
+<meta name="msvalidate.01" content="38CC9D2C724F147BA9B748A16992B329" />
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Quietum Plus™ &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Quietum Plus™ &raquo; Comments Feed" href="comments/feed/index.html" />
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='astra-theme-css-css' href='wp-content/themes/astra/assets/css/minified/main.minf3c8.css?ver=3.9.4' media='all' />
+<style id='astra-theme-css-inline-css'>
+:root{--ast-container-default-xlg-padding:3em;--ast-container-default-lg-padding:3em;--ast-container-default-slg-padding:2em;--ast-container-default-md-padding:3em;--ast-container-default-sm-padding:3em;--ast-container-default-xs-padding:2.4em;--ast-container-default-xxs-padding:1.8em;}html{font-size:93.75%;}a{color:var(--ast-global-color-0);}a:hover,a:focus{color:var(--ast-global-color-1);}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-family:'Jost',sans-serif;font-weight:inherit;font-size:15px;font-size:1rem;}blockquote{color:var(--ast-global-color-8);}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.site-title,.site-title a{font-family:'Jost',sans-serif;}.site-title{font-size:35px;font-size:2.3333333333333rem;display:none;}header .custom-logo-link img{max-width:186px;}.astra-logo-svg{width:186px;}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.6666666666667rem;}.site-header .site-description{font-size:15px;font-size:1rem;display:none;}.entry-title{font-size:30px;font-size:2rem;}h1,.entry-content h1{font-size:40px;font-size:2.6666666666667rem;font-family:'Jost',sans-serif;}h2,.entry-content h2{font-size:30px;font-size:2rem;font-family:'Jost',sans-serif;}h3,.entry-content h3{font-size:25px;font-size:1.6666666666667rem;font-family:'Jost',sans-serif;}h4,.entry-content h4{font-size:20px;font-size:1.3333333333333rem;font-family:'Jost',sans-serif;}h5,.entry-content h5{font-size:18px;font-size:1.2rem;font-family:'Jost',sans-serif;}h6,.entry-content h6{font-size:15px;font-size:1rem;font-family:'Jost',sans-serif;}.ast-single-post .entry-title,.page-title{font-size:30px;font-size:2rem;}::selection{background-color:var(--ast-global-color-0);color:#ffffff;}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6{color:var(--ast-global-color-8);}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#ffffff;border-color:var(--ast-global-color-0);background-color:var(--ast-global-color-0);}input:focus,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="reset"]:focus,input[type="search"]:focus,textarea:focus{border-color:var(--ast-global-color-0);}input[type="radio"]:checked,input[type=reset],input[type="checkbox"]:checked,input[type="checkbox"]:hover:checked,input[type="checkbox"]:focus:checked,input[type=range]::-webkit-slider-thumb{border-color:var(--ast-global-color-0);background-color:var(--ast-global-color-0);box-shadow:none;}.site-footer a:hover + .post-count,.site-footer a:focus + .post-count{background:var(--ast-global-color-0);border-color:var(--ast-global-color-0);}.single .nav-links .nav-previous,.single .nav-links .nav-next{color:var(--ast-global-color-0);}.entry-meta,.entry-meta *{line-height:1.45;color:var(--ast-global-color-0);}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:var(--ast-global-color-1);}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:var(--ast-global-color-0);}.secondary .calendar_wrap #today,.ast-progress-val span{background:var(--ast-global-color-0);}.secondary a:hover + .post-count,.secondary a:focus + .post-count{background:var(--ast-global-color-0);border-color:var(--ast-global-color-0);}.calendar_wrap #today > a{color:#ffffff;}.page-links .page-link,.single .post-navigation a{color:var(--ast-global-color-0);}.ast-archive-title{color:var(--ast-global-color-8);}.widget-title{font-size:21px;font-size:1.4rem;color:var(--ast-global-color-8);}.ast-single-post .entry-content a,.ast-comment-content a:not(.ast-comment-edit-reply-wrap a){text-decoration:underline;}.ast-single-post .wp-block-button .wp-block-button__link,.ast-single-post .elementor-button-wrapper .elementor-button,.ast-single-post .entry-content .uagb-tab a,.ast-single-post .entry-content .uagb-ifb-cta a,.ast-single-post .entry-content .wp-block-uagb-buttons a,.ast-single-post .entry-content .uabb-module-content a,.ast-single-post .entry-content .uagb-post-grid a,.ast-single-post .entry-content .uagb-timeline a,.ast-single-post .entry-content .uagb-toc__wrap a,.ast-single-post .entry-content .uagb-taxomony-box a,.ast-single-post .entry-content .woocommerce a,.entry-content .wp-block-latest-posts > li > a{text-decoration:none;}.site-logo-img img{ transition:all 0.2s linear;}@media (max-width:921px){#ast-desktop-header{display:none;}}@media (min-width:921px){#ast-mobile-header{display:none;}}.wp-block-buttons.aligncenter{justify-content:center;}@media (max-width:921px){.ast-theme-transparent-header #primary,.ast-theme-transparent-header #secondary{padding:0;}}@media (max-width:921px){.ast-plain-container.ast-no-sidebar #primary{padding:0;}}.ast-plain-container.ast-no-sidebar #primary{margin-top:0;margin-bottom:0;}@media (min-width:1200px){.ast-plain-container.ast-no-sidebar #primary{margin-top:60px;margin-bottom:60px;}}.wp-block-button.is-style-outline .wp-block-button__link{border-color:var(--ast-global-color-0);}.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color),.wp-block-button.wp-block-button__link.is-style-outline:not(.has-text-color){color:var(--ast-global-color-0);}.wp-block-button.is-style-outline .wp-block-button__link:hover,.wp-block-button.is-style-outline .wp-block-button__link:focus{color:#ffffff !important;background-color:var(--ast-global-color-1);border-color:var(--ast-global-color-1);}.post-page-numbers.current .page-link,.ast-pagination .page-numbers.current{color:#ffffff;border-color:var(--ast-global-color-0);background-color:var(--ast-global-color-0);border-radius:2px;}h1.widget-title{font-weight:inherit;}h2.widget-title{font-weight:inherit;}h3.widget-title{font-weight:inherit;}#page{display:flex;flex-direction:column;min-height:100vh;}.ast-404-layout-1 h1.page-title{color:var(--ast-global-color-2);}.single .post-navigation a{line-height:1em;height:inherit;}.error-404 .page-sub-title{font-size:1.5rem;font-weight:inherit;}.search .site-content .content-area .search-form{margin-bottom:0;}#page .site-content{flex-grow:1;}.widget{margin-bottom:3.5em;}#secondary li{line-height:1.5em;}#secondary .wp-block-group h2{margin-bottom:0.7em;}#secondary h2{font-size:1.7rem;}.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single,.ast-separate-container .ast-comment-list li.depth-1,.ast-separate-container .comment-respond{padding:3em;}.ast-separate-container .ast-comment-list li.depth-1,.hentry{margin-bottom:2em;}.ast-separate-container .ast-archive-description,.ast-separate-container .ast-author-box{background-color:var(--ast-global-color-5);border-bottom:1px solid var(--ast-border-color);}.ast-separate-container .comments-title{padding:2em 2em 0 2em;}.ast-page-builder-template .comment-form-textarea,.ast-comment-formwrap .ast-grid-common-col{padding:0;}.ast-comment-formwrap{padding:0 20px;display:inline-flex;column-gap:20px;}.archive.ast-page-builder-template .entry-header{margin-top:2em;}.ast-page-builder-template .ast-comment-formwrap{width:100%;}.entry-title{margin-bottom:0.5em;}.ast-archive-description .ast-archive-title{margin-bottom:10px;text-transform:capitalize;}.ast-archive-description p{font-size:inherit;font-weight:inherit;line-height:inherit;}@media (min-width:921px){.ast-left-sidebar.ast-page-builder-template #secondary,.archive.ast-right-sidebar.ast-page-builder-template .site-main{padding-left:20px;padding-right:20px;}}@media (max-width:544px){.ast-comment-formwrap.ast-row{column-gap:10px;}}@media (min-width:1201px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single,.ast-separate-container .ast-archive-description,.ast-separate-container .ast-author-box,.ast-separate-container .ast-404-layout-1,.ast-separate-container .no-results{padding:3em;}}@media (max-width:921px){.ast-separate-container #primary,.ast-separate-container #secondary{padding:1.5em 0;}#primary,#secondary{padding:1.5em 0;margin:0;}.ast-left-sidebar #content > .ast-container{display:flex;flex-direction:column-reverse;width:100%;}}@media (min-width:922px){.ast-separate-container.ast-right-sidebar #primary,.ast-separate-container.ast-left-sidebar #primary{border:0;}.search-no-results.ast-separate-container #primary{margin-bottom:4em;}}.wp-block-button .wp-block-button__link{color:#ffffff;}.wp-block-button .wp-block-button__link:hover,.wp-block-button .wp-block-button__link:focus{color:#ffffff;background-color:var(--ast-global-color-1);border-color:var(--ast-global-color-1);}.wp-block-button .wp-block-button__link,.wp-block-search .wp-block-search__button,body .wp-block-file .wp-block-file__button{border-color:var(--ast-global-color-0);background-color:var(--ast-global-color-0);color:#ffffff;font-family:inherit;font-weight:inherit;line-height:1;border-radius:2px;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;}@media (max-width:921px){.wp-block-button .wp-block-button__link,.wp-block-search .wp-block-search__button,body .wp-block-file .wp-block-file__button{padding-top:14px;padding-right:28px;padding-bottom:14px;padding-left:28px;}}@media (max-width:544px){.wp-block-button .wp-block-button__link,.wp-block-search .wp-block-search__button,body .wp-block-file .wp-block-file__button{padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;}}.menu-toggle,button,.ast-button,.ast-custom-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"],form[CLASS*="wp-block-search__"].wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button,body .wp-block-file .wp-block-file__button,.search .search-submit{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;color:#ffffff;border-color:var(--ast-global-color-0);background-color:var(--ast-global-color-0);border-radius:2px;padding-top:15px;padding-right:30px;padding-bottom:15px;padding-left:30px;font-family:inherit;font-weight:inherit;line-height:1;}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.ast-custom-button:hover .button:hover,.ast-custom-button:hover ,input[type=reset]:hover,input[type=reset]:focus,input#submit:hover,input#submit:focus,input[type="button"]:hover,input[type="button"]:focus,input[type="submit"]:hover,input[type="submit"]:focus,form[CLASS*="wp-block-search__"].wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover,form[CLASS*="wp-block-search__"].wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:focus,body .wp-block-file .wp-block-file__button:hover,body .wp-block-file .wp-block-file__button:focus{color:#ffffff;background-color:var(--ast-global-color-1);border-color:var(--ast-global-color-1);}form[CLASS*="wp-block-search__"].wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button.has-icon{padding-top:calc(15px - 3px);padding-right:calc(30px - 3px);padding-bottom:calc(15px - 3px);padding-left:calc(30px - 3px);}@media (min-width:544px){.ast-container{max-width:100%;}}@media (max-width:544px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single,.ast-separate-container .comments-title,.ast-separate-container .ast-archive-description{padding:1.5em 1em;}.ast-separate-container #content .ast-container{padding-left:0.54em;padding-right:0.54em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 1em;margin-bottom:1.5em;}.ast-separate-container .ast-comment-list .bypostauthor{padding:.5em;}.ast-search-menu-icon.ast-dropdown-active .search-field{width:170px;}.menu-toggle,button,.ast-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{padding-top:12px;padding-right:24px;padding-bottom:12px;padding-left:24px;}}@media (max-width:921px){.menu-toggle,button,.ast-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{padding-top:14px;padding-right:28px;padding-bottom:14px;padding-left:28px;}.ast-mobile-header-stack .main-header-bar .ast-search-menu-icon{display:inline-block;}.ast-header-break-point.ast-header-custom-item-outside .ast-mobile-header-stack .main-header-bar .ast-search-icon{margin:0;}.ast-comment-avatar-wrap img{max-width:2.5em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 2.14em;}.ast-separate-container .comment-respond{padding:2em 2.14em;}.ast-comment-meta{padding:0 1.8888em 1.3333em;}}@media (max-width:921px){.site-title{display:none;}.ast-archive-description .ast-archive-title{font-size:40px;}.site-header .site-description{display:none;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:544px){.site-title{display:none;}.ast-archive-description .ast-archive-title{font-size:40px;}.site-header .site-description{display:none;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:921px){html{font-size:85.5%;}}@media (max-width:544px){html{font-size:85.5%;}}@media (min-width:922px){.ast-container{max-width:1240px;}}@media (min-width:922px){.site-content .ast-container{display:flex;}}@media (max-width:921px){.site-content .ast-container{flex-direction:column;}}@media (min-width:922px){.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu:hover > .sub-menu,.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu.focus > .sub-menu{margin-left:-0px;}}.footer-widget-area[data-section^="section-fb-html-"] .ast-builder-html-element{text-align:center;}blockquote,cite {font-style: initial;}.wp-block-file {display: flex;align-items: center;flex-wrap: wrap;justify-content: space-between;}.wp-block-pullquote {border: none;}.wp-block-pullquote blockquote::before {content: "\201D";font-family: "Helvetica",sans-serif;display: flex;transform: rotate( 180deg );font-size: 6rem;font-style: normal;line-height: 1;font-weight: bold;align-items: center;justify-content: center;}.has-text-align-right > blockquote::before {justify-content: flex-start;}.has-text-align-left > blockquote::before {justify-content: flex-end;}figure.wp-block-pullquote.is-style-solid-color blockquote {max-width: 100%;text-align: inherit;}html body {--wp--custom--ast-default-block-top-padding: 3em;--wp--custom--ast-default-block-right-padding: 3em;--wp--custom--ast-default-block-bottom-padding: 3em;--wp--custom--ast-default-block-left-padding: 3em;--wp--custom--ast-container-width: 1200px;--wp--custom--ast-content-width-size: 1200px;--wp--custom--ast-wide-width-size: calc(1200px + var(--wp--custom--ast-default-block-left-padding) + var(--wp--custom--ast-default-block-right-padding));}@media(max-width: 921px) {html body {--wp--custom--ast-default-block-top-padding: 3em;--wp--custom--ast-default-block-right-padding: 2em;--wp--custom--ast-default-block-bottom-padding: 3em;--wp--custom--ast-default-block-left-padding: 2em;}}@media(max-width: 544px) {html body {--wp--custom--ast-default-block-top-padding: 3em;--wp--custom--ast-default-block-right-padding: 1.5em;--wp--custom--ast-default-block-bottom-padding: 3em;--wp--custom--ast-default-block-left-padding: 1.5em;}}.entry-content > .wp-block-group,.entry-content > .wp-block-cover,.entry-content > .wp-block-columns {padding-top: var(--wp--custom--ast-default-block-top-padding);padding-right: var(--wp--custom--ast-default-block-right-padding);padding-bottom: var(--wp--custom--ast-default-block-bottom-padding);padding-left: var(--wp--custom--ast-default-block-left-padding);}.ast-plain-container.ast-no-sidebar .entry-content > .alignfull,.ast-page-builder-template .ast-no-sidebar .entry-content > .alignfull {margin-left: calc( -50vw + 50%);margin-right: calc( -50vw + 50%);max-width: 100vw;width: 100vw;}.ast-plain-container.ast-no-sidebar .entry-content .alignfull .alignfull,.ast-page-builder-template.ast-no-sidebar .entry-content .alignfull .alignfull,.ast-plain-container.ast-no-sidebar .entry-content .alignfull .alignwide,.ast-page-builder-template.ast-no-sidebar .entry-content .alignfull .alignwide,.ast-plain-container.ast-no-sidebar .entry-content .alignwide .alignfull,.ast-page-builder-template.ast-no-sidebar .entry-content .alignwide .alignfull,.ast-plain-container.ast-no-sidebar .entry-content .alignwide .alignwide,.ast-page-builder-template.ast-no-sidebar .entry-content .alignwide .alignwide,.ast-plain-container.ast-no-sidebar .entry-content .wp-block-column .alignfull,.ast-page-builder-template.ast-no-sidebar .entry-content .wp-block-column .alignfull,.ast-plain-container.ast-no-sidebar .entry-content .wp-block-column .alignwide,.ast-page-builder-template.ast-no-sidebar .entry-content .wp-block-column .alignwide {margin-left: auto;margin-right: auto;width: 100%;}[ast-blocks-layout] .wp-block-separator:not(.is-style-dots) {height: 0;}[ast-blocks-layout] .wp-block-separator {margin: 20px auto;}[ast-blocks-layout] .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {max-width: 100px;}[ast-blocks-layout] .wp-block-separator.has-background {padding: 0;}.entry-content[ast-blocks-layout] > * {max-width: var(--wp--custom--ast-content-width-size);margin-left: auto;margin-right: auto;}.entry-content[ast-blocks-layout] > .alignwide {max-width: var(--wp--custom--ast-wide-width-size);}.entry-content[ast-blocks-layout] .alignfull {max-width: none;}.entry-content .wp-block-columns {margin-bottom: 0;}blockquote {margin: 1.5em;border: none;}.wp-block-quote:not(.has-text-align-right):not(.has-text-align-center) {border-left: 5px solid rgba(0,0,0,0.05);}.has-text-align-right > blockquote,blockquote.has-text-align-right {border-right: 5px solid rgba(0,0,0,0.05);}.has-text-align-left > blockquote,blockquote.has-text-align-left {border-left: 5px solid rgba(0,0,0,0.05);}.wp-block-site-tagline,.wp-block-latest-posts .read-more {margin-top: 15px;}.wp-block-loginout p label {display: block;}.wp-block-loginout p:not(.login-remember):not(.login-submit) input {width: 100%;}.wp-block-loginout input:focus {border-color: transparent;}.wp-block-loginout input:focus {outline: thin dotted;}.entry-content .wp-block-media-text .wp-block-media-text__content {padding: 0 0 0 8%;}.entry-content .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {padding: 0 8% 0 0;}.entry-content .wp-block-media-text.has-background .wp-block-media-text__content {padding: 8%;}.entry-content .wp-block-cover:not([class*="background-color"]) .wp-block-cover__inner-container,.entry-content .wp-block-cover:not([class*="background-color"]) .wp-block-cover-image-text,.entry-content .wp-block-cover:not([class*="background-color"]) .wp-block-cover-text,.entry-content .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover__inner-container,.entry-content .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-image-text,.entry-content .wp-block-cover-image:not([class*="background-color"]) .wp-block-cover-text {color: var(--ast-global-color-5);}.wp-block-loginout .login-remember input {width: 1.1rem;height: 1.1rem;margin: 0 5px 4px 0;vertical-align: middle;}.wp-block-latest-posts > li > *:first-child,.wp-block-latest-posts:not(.is-grid) > li:first-child {margin-top: 0;}.wp-block-search__inside-wrapper .wp-block-search__input {padding: 0 10px;color: var(--ast-global-color-3);background: var(--ast-global-color-5);border-color: var(--ast-border-color);}.wp-block-latest-posts .read-more {margin-bottom: 1.5em;}.wp-block-search__no-button .wp-block-search__inside-wrapper .wp-block-search__input {padding-top: 5px;padding-bottom: 5px;}.wp-block-latest-posts .wp-block-latest-posts__post-date,.wp-block-latest-posts .wp-block-latest-posts__post-author {font-size: 1rem;}.wp-block-latest-posts > li > *,.wp-block-latest-posts:not(.is-grid) > li {margin-top: 12px;margin-bottom: 12px;}.ast-page-builder-template .entry-content[ast-blocks-layout] > *,.ast-page-builder-template .entry-content[ast-blocks-layout] > .alignfull > * {max-width: none;}.ast-page-builder-template .entry-content[ast-blocks-layout] > .alignwide > * {max-width: var(--wp--custom--ast-wide-width-size);}.ast-page-builder-template .entry-content[ast-blocks-layout] > .inherit-container-width > *,.ast-page-builder-template .entry-content[ast-blocks-layout] > * > *,.entry-content[ast-blocks-layout] > .wp-block-cover .wp-block-cover__inner-container {max-width: var(--wp--custom--ast-content-width-size);margin-left: auto;margin-right: auto;}.entry-content[ast-blocks-layout] .wp-block-cover:not(.alignleft):not(.alignright) {width: auto;}@media(max-width: 1200px) {.ast-separate-container .entry-content > .alignfull,.ast-separate-container .entry-content[ast-blocks-layout] > .alignwide,.ast-plain-container .entry-content[ast-blocks-layout] > .alignwide,.ast-plain-container .entry-content .alignfull {margin-left: calc(-1 * min(var(--ast-container-default-xlg-padding),20px)) ;margin-right: calc(-1 * min(var(--ast-container-default-xlg-padding),20px));}}@media(min-width: 1201px) {.ast-separate-container .entry-content > .alignfull {margin-left: calc(-1 * var(--ast-container-default-xlg-padding) );margin-right: calc(-1 * var(--ast-container-default-xlg-padding) );}.ast-separate-container .entry-content[ast-blocks-layout] > .alignwide,.ast-plain-container .entry-content[ast-blocks-layout] > .alignwide {margin-left: calc(-1 * var(--wp--custom--ast-default-block-left-padding) );margin-right: calc(-1 * var(--wp--custom--ast-default-block-right-padding) );}}@media(min-width: 921px) {.ast-separate-container .entry-content .wp-block-group.alignwide:not(.inherit-container-width) > :where(:not(.alignleft):not(.alignright)),.ast-plain-container .entry-content .wp-block-group.alignwide:not(.inherit-container-width) > :where(:not(.alignleft):not(.alignright)) {max-width: calc( var(--wp--custom--ast-content-width-size) + 80px );}.ast-plain-container.ast-right-sidebar .entry-content[ast-blocks-layout] .alignfull,.ast-plain-container.ast-left-sidebar .entry-content[ast-blocks-layout] .alignfull {margin-left: -60px;margin-right: -60px;}}@media(min-width: 544px) {.entry-content > .alignleft {margin-right: 20px;}.entry-content > .alignright {margin-left: 20px;}}@media (max-width:544px){.wp-block-columns .wp-block-column:not(:last-child){margin-bottom:20px;}.wp-block-latest-posts{margin:0;}}@media( max-width: 600px ) {.entry-content .wp-block-media-text .wp-block-media-text__content,.entry-content .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {padding: 8% 0 0;}.entry-content .wp-block-media-text.has-background .wp-block-media-text__content {padding: 8%;}}.ast-separate-container .entry-content .wp-block-uagb-container {padding-left: 0;}.ast-page-builder-template .entry-header {padding-left: 0;}@media(min-width: 1201px) {.ast-separate-container .entry-content > .uagb-is-root-container {margin-left: 0;margin-right: 0;}}.entry-content[ast-blocks-layout] > ul,.entry-content[ast-blocks-layout] > ol {margin-left: 1em;}:root .has-ast-global-color-0-color{color:var(--ast-global-color-0);}:root .has-ast-global-color-0-background-color{background-color:var(--ast-global-color-0);}:root .wp-block-button .has-ast-global-color-0-color{color:var(--ast-global-color-0);}:root .wp-block-button .has-ast-global-color-0-background-color{background-color:var(--ast-global-color-0);}:root .has-ast-global-color-1-color{color:var(--ast-global-color-1);}:root .has-ast-global-color-1-background-color{background-color:var(--ast-global-color-1);}:root .wp-block-button .has-ast-global-color-1-color{color:var(--ast-global-color-1);}:root .wp-block-button .has-ast-global-color-1-background-color{background-color:var(--ast-global-color-1);}:root .has-ast-global-color-2-color{color:var(--ast-global-color-2);}:root .has-ast-global-color-2-background-color{background-color:var(--ast-global-color-2);}:root .wp-block-button .has-ast-global-color-2-color{color:var(--ast-global-color-2);}:root .wp-block-button .has-ast-global-color-2-background-color{background-color:var(--ast-global-color-2);}:root .has-ast-global-color-3-color{color:var(--ast-global-color-3);}:root .has-ast-global-color-3-background-color{background-color:var(--ast-global-color-3);}:root .wp-block-button .has-ast-global-color-3-color{color:var(--ast-global-color-3);}:root .wp-block-button .has-ast-global-color-3-background-color{background-color:var(--ast-global-color-3);}:root .has-ast-global-color-4-color{color:var(--ast-global-color-4);}:root .has-ast-global-color-4-background-color{background-color:var(--ast-global-color-4);}:root .wp-block-button .has-ast-global-color-4-color{color:var(--ast-global-color-4);}:root .wp-block-button .has-ast-global-color-4-background-color{background-color:var(--ast-global-color-4);}:root .has-ast-global-color-5-color{color:var(--ast-global-color-5);}:root .has-ast-global-color-5-background-color{background-color:var(--ast-global-color-5);}:root .wp-block-button .has-ast-global-color-5-color{color:var(--ast-global-color-5);}:root .wp-block-button .has-ast-global-color-5-background-color{background-color:var(--ast-global-color-5);}:root .has-ast-global-color-6-color{color:var(--ast-global-color-6);}:root .has-ast-global-color-6-background-color{background-color:var(--ast-global-color-6);}:root .wp-block-button .has-ast-global-color-6-color{color:var(--ast-global-color-6);}:root .wp-block-button .has-ast-global-color-6-background-color{background-color:var(--ast-global-color-6);}:root .has-ast-global-color-7-color{color:var(--ast-global-color-7);}:root .has-ast-global-color-7-background-color{background-color:var(--ast-global-color-7);}:root .wp-block-button .has-ast-global-color-7-color{color:var(--ast-global-color-7);}:root .wp-block-button .has-ast-global-color-7-background-color{background-color:var(--ast-global-color-7);}:root .has-ast-global-color-8-color{color:var(--ast-global-color-8);}:root .has-ast-global-color-8-background-color{background-color:var(--ast-global-color-8);}:root .wp-block-button .has-ast-global-color-8-color{color:var(--ast-global-color-8);}:root .wp-block-button .has-ast-global-color-8-background-color{background-color:var(--ast-global-color-8);}:root{--ast-global-color-0:#0170B9;--ast-global-color-1:#3a3a3a;--ast-global-color-2:#3a3a3a;--ast-global-color-3:#4B4F58;--ast-global-color-4:#F5F5F5;--ast-global-color-5:#FFFFFF;--ast-global-color-6:#E5E5E5;--ast-global-color-7:#424242;--ast-global-color-8:#000000;}:root {--ast-border-color : var(--ast-global-color-6);}.ast-breadcrumbs .trail-browse,.ast-breadcrumbs .trail-items,.ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0;}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}.ast-breadcrumbs .trail-items{list-style:none;}.trail-items li::after{padding:0 0.3em;content:"\00bb";}.trail-items li:last-of-type::after{display:none;}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6{color:var(--ast-global-color-8);}.entry-title a{color:var(--ast-global-color-8);}@media (max-width:921px){.ast-builder-grid-row-container.ast-builder-grid-row-tablet-3-firstrow .ast-builder-grid-row > *:first-child,.ast-builder-grid-row-container.ast-builder-grid-row-tablet-3-lastrow .ast-builder-grid-row > *:last-child{grid-column:1 / -1;}}@media (max-width:544px){.ast-builder-grid-row-container.ast-builder-grid-row-mobile-3-firstrow .ast-builder-grid-row > *:first-child,.ast-builder-grid-row-container.ast-builder-grid-row-mobile-3-lastrow .ast-builder-grid-row > *:last-child{grid-column:1 / -1;}}.ast-builder-layout-element[data-section="title_tagline"]{display:flex;}@media (max-width:921px){.ast-header-break-point .ast-builder-layout-element[data-section="title_tagline"]{display:flex;}}@media (max-width:544px){.ast-header-break-point .ast-builder-layout-element[data-section="title_tagline"]{display:flex;}}[data-section*="section-hb-button-"] .menu-link{display:none;}.ast-header-button-1[data-section*="section-hb-button-"] .ast-builder-button-wrap .ast-custom-button{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;font-size:1.2rem;}.ast-header-button-1 .ast-custom-button{color:var(--ast-global-color-8);background:#ffe161;}.ast-header-button-1[data-section="section-hb-button-1"]{display:flex;}@media (max-width:921px){.ast-header-break-point .ast-header-button-1[data-section="section-hb-button-1"]{display:flex;}}@media (max-width:544px){.ast-header-break-point .ast-header-button-1[data-section="section-hb-button-1"]{display:flex;}}.ast-builder-menu-1{font-family:'Jost',sans-serif;font-weight:500;}.ast-builder-menu-1 .menu-item > .menu-link{font-size:18px;font-size:1.2rem;color:#ffffff;}.ast-builder-menu-1 .menu-item > .ast-menu-toggle{color:#ffffff;}.ast-builder-menu-1 .sub-menu,.ast-builder-menu-1 .inline-on-mobile .sub-menu{border-top-width:2px;border-bottom-width:0;border-right-width:0;border-left-width:0;border-color:var(--ast-global-color-0);border-style:solid;border-radius:0;}.ast-builder-menu-1 .main-header-menu > .menu-item > .sub-menu,.ast-builder-menu-1 .main-header-menu > .menu-item > .astra-full-megamenu-wrapper{margin-top:0;}.ast-desktop .ast-builder-menu-1 .main-header-menu > .menu-item > .sub-menu:before,.ast-desktop .ast-builder-menu-1 .main-header-menu > .menu-item > .astra-full-megamenu-wrapper:before{height:calc( 0px + 5px );}.ast-desktop .ast-builder-menu-1 .menu-item .sub-menu .menu-link{border-style:none;}@media (max-width:921px){.ast-header-break-point .ast-builder-menu-1 .menu-item.menu-item-has-children > .ast-menu-toggle{top:0;}.ast-builder-menu-1 .menu-item-has-children > .menu-link:after{content:unset;}.ast-builder-menu-1 .main-header-menu > .menu-item > .sub-menu,.ast-builder-menu-1 .main-header-menu > .menu-item > .astra-full-megamenu-wrapper{margin-top:0;}}@media (max-width:544px){.ast-header-break-point .ast-builder-menu-1 .menu-item.menu-item-has-children > .ast-menu-toggle{top:0;}.ast-builder-menu-1 .main-header-menu > .menu-item > .sub-menu,.ast-builder-menu-1 .main-header-menu > .menu-item > .astra-full-megamenu-wrapper{margin-top:0;}}.ast-builder-menu-1{display:flex;}@media (max-width:921px){.ast-header-break-point .ast-builder-menu-1{display:flex;}}@media (max-width:544px){.ast-header-break-point .ast-builder-menu-1{display:flex;}}.site-below-footer-wrap{padding-top:20px;padding-bottom:20px;}.site-below-footer-wrap[data-section="section-below-footer-builder"]{background-color:#eeeeee;;min-height:80px;}.site-below-footer-wrap[data-section="section-below-footer-builder"] .ast-builder-grid-row{max-width:1200px;margin-left:auto;margin-right:auto;}.site-below-footer-wrap[data-section="section-below-footer-builder"] .ast-builder-grid-row,.site-below-footer-wrap[data-section="section-below-footer-builder"] .site-footer-section{align-items:flex-start;}.site-below-footer-wrap[data-section="section-below-footer-builder"].ast-footer-row-inline .site-footer-section{display:flex;margin-bottom:0;}.ast-builder-grid-row-full .ast-builder-grid-row{grid-template-columns:1fr;}@media (max-width:921px){.site-below-footer-wrap[data-section="section-below-footer-builder"].ast-footer-row-tablet-inline .site-footer-section{display:flex;margin-bottom:0;}.site-below-footer-wrap[data-section="section-below-footer-builder"].ast-footer-row-tablet-stack .site-footer-section{display:block;margin-bottom:10px;}.ast-builder-grid-row-container.ast-builder-grid-row-tablet-full .ast-builder-grid-row{grid-template-columns:1fr;}}@media (max-width:544px){.site-below-footer-wrap[data-section="section-below-footer-builder"].ast-footer-row-mobile-inline .site-footer-section{display:flex;margin-bottom:0;}.site-below-footer-wrap[data-section="section-below-footer-builder"].ast-footer-row-mobile-stack .site-footer-section{display:block;margin-bottom:10px;}.ast-builder-grid-row-container.ast-builder-grid-row-mobile-full .ast-builder-grid-row{grid-template-columns:1fr;}}.site-below-footer-wrap[data-section="section-below-footer-builder"]{display:grid;}@media (max-width:921px){.ast-header-break-point .site-below-footer-wrap[data-section="section-below-footer-builder"]{display:grid;}}@media (max-width:544px){.ast-header-break-point .site-below-footer-wrap[data-section="section-below-footer-builder"]{display:grid;}}.ast-builder-html-element img.alignnone{display:inline-block;}.ast-builder-html-element p:first-child{margin-top:0;}.ast-builder-html-element p:last-child{margin-bottom:0;}.ast-header-break-point .main-header-bar .ast-builder-html-element{line-height:1.85714285714286;}.footer-widget-area[data-section="section-fb-html-1"]{display:block;}@media (max-width:921px){.ast-header-break-point .footer-widget-area[data-section="section-fb-html-1"]{display:block;}}@media (max-width:544px){.ast-header-break-point .footer-widget-area[data-section="section-fb-html-1"]{display:block;}}.footer-widget-area[data-section="section-fb-html-1"] .ast-builder-html-element{text-align:center;}@media (max-width:921px){.footer-widget-area[data-section="section-fb-html-1"] .ast-builder-html-element{text-align:center;}}@media (max-width:544px){.footer-widget-area[data-section="section-fb-html-1"] .ast-builder-html-element{text-align:center;}}.ast-footer-copyright{text-align:center;}.ast-footer-copyright {color:var(--ast-global-color-8);}@media (max-width:921px){.ast-footer-copyright{text-align:center;}}@media (max-width:544px){.ast-footer-copyright{text-align:center;}}.ast-footer-copyright.ast-builder-layout-element{display:flex;}@media (max-width:921px){.ast-header-break-point .ast-footer-copyright.ast-builder-layout-element{display:flex;}}@media (max-width:544px){.ast-header-break-point .ast-footer-copyright.ast-builder-layout-element{display:flex;}}.site-above-footer-wrap{padding-top:20px;padding-bottom:20px;}.site-above-footer-wrap[data-section="section-above-footer-builder"]{background-color:#eeeeee;;background-image:none;;min-height:60px;}.site-above-footer-wrap[data-section="section-above-footer-builder"] .ast-builder-grid-row{max-width:1200px;margin-left:auto;margin-right:auto;}.site-above-footer-wrap[data-section="section-above-footer-builder"] .ast-builder-grid-row,.site-above-footer-wrap[data-section="section-above-footer-builder"] .site-footer-section{align-items:flex-start;}.site-above-footer-wrap[data-section="section-above-footer-builder"].ast-footer-row-inline .site-footer-section{display:flex;margin-bottom:0;}.ast-builder-grid-row-full .ast-builder-grid-row{grid-template-columns:1fr;}@media (max-width:921px){.site-above-footer-wrap[data-section="section-above-footer-builder"].ast-footer-row-tablet-inline .site-footer-section{display:flex;margin-bottom:0;}.site-above-footer-wrap[data-section="section-above-footer-builder"].ast-footer-row-tablet-stack .site-footer-section{display:block;margin-bottom:10px;}.ast-builder-grid-row-container.ast-builder-grid-row-tablet-full .ast-builder-grid-row{grid-template-columns:1fr;}}@media (max-width:544px){.site-above-footer-wrap[data-section="section-above-footer-builder"].ast-footer-row-mobile-inline .site-footer-section{display:flex;margin-bottom:0;}.site-above-footer-wrap[data-section="section-above-footer-builder"].ast-footer-row-mobile-stack .site-footer-section{display:block;margin-bottom:10px;}.ast-builder-grid-row-container.ast-builder-grid-row-mobile-full .ast-builder-grid-row{grid-template-columns:1fr;}}.site-above-footer-wrap[data-section="section-above-footer-builder"]{display:grid;}@media (max-width:921px){.ast-header-break-point .site-above-footer-wrap[data-section="section-above-footer-builder"]{display:grid;}}@media (max-width:544px){.ast-header-break-point .site-above-footer-wrap[data-section="section-above-footer-builder"]{display:grid;}}.site-primary-footer-wrap{padding-top:45px;padding-bottom:45px;}.site-primary-footer-wrap[data-section="section-primary-footer-builder"]{background-color:#f9f9f9;;background-image:none;;border-style:solid;border-width:0px;border-top-width:1px;border-top-color:#e6e6e6;}.site-primary-footer-wrap[data-section="section-primary-footer-builder"] .ast-builder-grid-row{max-width:1200px;margin-left:auto;margin-right:auto;}.site-primary-footer-wrap[data-section="section-primary-footer-builder"] .ast-builder-grid-row,.site-primary-footer-wrap[data-section="section-primary-footer-builder"] .site-footer-section{align-items:flex-start;}.site-primary-footer-wrap[data-section="section-primary-footer-builder"].ast-footer-row-inline .site-footer-section{display:flex;margin-bottom:0;}.ast-builder-grid-row-full .ast-builder-grid-row{grid-template-columns:1fr;}@media (max-width:921px){.site-primary-footer-wrap[data-section="section-primary-footer-builder"].ast-footer-row-tablet-inline .site-footer-section{display:flex;margin-bottom:0;}.site-primary-footer-wrap[data-section="section-primary-footer-builder"].ast-footer-row-tablet-stack .site-footer-section{display:block;margin-bottom:10px;}.ast-builder-grid-row-container.ast-builder-grid-row-tablet-full .ast-builder-grid-row{grid-template-columns:1fr;}}@media (max-width:544px){.site-primary-footer-wrap[data-section="section-primary-footer-builder"].ast-footer-row-mobile-inline .site-footer-section{display:flex;margin-bottom:0;}.site-primary-footer-wrap[data-section="section-primary-footer-builder"].ast-footer-row-mobile-stack .site-footer-section{display:block;margin-bottom:10px;}.ast-builder-grid-row-container.ast-builder-grid-row-mobile-full .ast-builder-grid-row{grid-template-columns:1fr;}}.site-primary-footer-wrap[data-section="section-primary-footer-builder"]{display:grid;}@media (max-width:921px){.ast-header-break-point .site-primary-footer-wrap[data-section="section-primary-footer-builder"]{display:grid;}}@media (max-width:544px){.ast-header-break-point .site-primary-footer-wrap[data-section="section-primary-footer-builder"]{display:grid;}}.ast-header-break-point .main-header-bar{border-bottom-width:1px;}@media (min-width:922px){.main-header-bar{border-bottom-width:1px;}}.main-header-menu .menu-item, #astra-footer-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}.main-header-menu > .menu-item > .menu-link, #astra-footer-menu > .menu-item > .menu-link{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex;}.ast-header-break-point .main-navigation ul .menu-item .menu-link .icon-arrow:first-of-type svg{top:.2em;margin-top:0px;margin-left:0px;width:.65em;transform:translate(0, -2px) rotateZ(270deg);}.ast-mobile-popup-content .ast-submenu-expanded > .ast-menu-toggle{transform:rotateX(180deg);}.ast-separate-container .blog-layout-1, .ast-separate-container .blog-layout-2, .ast-separate-container .blog-layout-3{background-color:transparent;background-image:none;}.ast-separate-container .ast-article-post{background-color:var(--ast-global-color-5);;background-image:none;;}@media (max-width:921px){.ast-separate-container .ast-article-post{background-color:var(--ast-global-color-5);;background-image:none;;}}@media (max-width:544px){.ast-separate-container .ast-article-post{background-color:var(--ast-global-color-5);;background-image:none;;}}.ast-separate-container .ast-article-single:not(.ast-related-post), .ast-separate-container .comments-area .comment-respond,.ast-separate-container .comments-area .ast-comment-list li, .ast-separate-container .ast-woocommerce-container, .ast-separate-container .error-404, .ast-separate-container .no-results, .single.ast-separate-container .site-main .ast-author-meta, .ast-separate-container .related-posts-title-wrapper, .ast-separate-container.ast-two-container #secondary .widget,.ast-separate-container .comments-count-wrapper, .ast-box-layout.ast-plain-container .site-content,.ast-padded-layout.ast-plain-container .site-content, .ast-separate-container .comments-area .comments-title{background-color:var(--ast-global-color-5);;background-image:none;;}@media (max-width:921px){.ast-separate-container .ast-article-single:not(.ast-related-post), .ast-separate-container .comments-area .comment-respond,.ast-separate-container .comments-area .ast-comment-list li, .ast-separate-container .ast-woocommerce-container, .ast-separate-container .error-404, .ast-separate-container .no-results, .single.ast-separate-container .site-main .ast-author-meta, .ast-separate-container .related-posts-title-wrapper, .ast-separate-container.ast-two-container #secondary .widget,.ast-separate-container .comments-count-wrapper, .ast-box-layout.ast-plain-container .site-content,.ast-padded-layout.ast-plain-container .site-content, .ast-separate-container .comments-area .comments-title{background-color:var(--ast-global-color-5);;background-image:none;;}}@media (max-width:544px){.ast-separate-container .ast-article-single:not(.ast-related-post), .ast-separate-container .comments-area .comment-respond,.ast-separate-container .comments-area .ast-comment-list li, .ast-separate-container .ast-woocommerce-container, .ast-separate-container .error-404, .ast-separate-container .no-results, .single.ast-separate-container .site-main .ast-author-meta, .ast-separate-container .related-posts-title-wrapper, .ast-separate-container.ast-two-container #secondary .widget,.ast-separate-container .comments-count-wrapper, .ast-box-layout.ast-plain-container .site-content,.ast-padded-layout.ast-plain-container .site-content, .ast-separate-container .comments-area .comments-title{background-color:var(--ast-global-color-5);;background-image:none;;}}.ast-plain-container, .ast-page-builder-template{background-color:var(--ast-global-color-5);;background-image:none;;}@media (max-width:921px){.ast-plain-container, .ast-page-builder-template{background-color:var(--ast-global-color-5);;background-image:none;;}}@media (max-width:544px){.ast-plain-container, .ast-page-builder-template{background-color:var(--ast-global-color-5);;background-image:none;;}}.ast-mobile-header-wrap .ast-primary-header-bar,.ast-primary-header-bar .site-primary-header-wrap{min-height:80px;}.ast-desktop .ast-primary-header-bar .main-header-menu > .menu-item{line-height:80px;}@media (max-width:921px){#masthead .ast-mobile-header-wrap .ast-primary-header-bar,#masthead .ast-mobile-header-wrap .ast-below-header-bar{padding-left:20px;padding-right:20px;}}.ast-header-break-point .ast-primary-header-bar{border-bottom-width:1px;border-bottom-color:#eaeaea;border-bottom-style:solid;}@media (min-width:922px){.ast-primary-header-bar{border-bottom-width:1px;border-bottom-color:#eaeaea;border-bottom-style:solid;}}.ast-primary-header-bar{background-color:#748ea3;;background-image:none;;}.ast-primary-header-bar{display:block;}@media (max-width:921px){.ast-header-break-point .ast-primary-header-bar{display:grid;}}@media (max-width:544px){.ast-header-break-point .ast-primary-header-bar{display:grid;}}.ast-builder-menu-mobile .main-navigation .menu-item > .menu-link{font-family:inherit;font-weight:inherit;}.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children > .ast-menu-toggle{top:0;}.ast-builder-menu-mobile .main-navigation .menu-item-has-children > .menu-link:after{content:unset;}.ast-hfb-header .ast-builder-menu-mobile .main-header-menu, .ast-hfb-header .ast-builder-menu-mobile .main-navigation .menu-item .menu-link, .ast-hfb-header .ast-builder-menu-mobile .main-navigation .menu-item .sub-menu .menu-link{border-style:none;}.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children > .ast-menu-toggle{top:0;}@media (max-width:921px){.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children > .ast-menu-toggle{top:0;}.ast-builder-menu-mobile .main-navigation .menu-item-has-children > .menu-link:after{content:unset;}}@media (max-width:544px){.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children > .ast-menu-toggle{top:0;}}.ast-builder-menu-mobile .main-navigation{display:block;}@media (max-width:921px){.ast-header-break-point .ast-builder-menu-mobile .main-navigation{display:block;}}@media (max-width:544px){.ast-header-break-point .ast-builder-menu-mobile .main-navigation{display:block;}}.footer-nav-wrap .astra-footer-vertical-menu {display: grid;}@media (min-width: 769px) {.footer-nav-wrap .astra-footer-horizontal-menu li {margin: 0;}.footer-nav-wrap .astra-footer-horizontal-menu a {padding: 0 0.5em;}}@media (min-width: 769px) {.footer-nav-wrap .astra-footer-horizontal-menu li:first-child a {padding-left: 0;}.footer-nav-wrap .astra-footer-horizontal-menu li:last-child a {padding-right: 0;}}.footer-widget-area[data-section="section-footer-menu"] .astra-footer-horizontal-menu{justify-content:center;}.footer-widget-area[data-section="section-footer-menu"] .astra-footer-vertical-menu .menu-item{align-items:center;}#astra-footer-menu .menu-item > a{color:#000000;font-size:19px;font-size:1.2666666666667rem;padding-left:25px;padding-right:25px;}@media (max-width:921px){.footer-widget-area[data-section="section-footer-menu"] .astra-footer-tablet-horizontal-menu{justify-content:center;}.footer-widget-area[data-section="section-footer-menu"] .astra-footer-tablet-vertical-menu{display:grid;}.footer-widget-area[data-section="section-footer-menu"] .astra-footer-tablet-vertical-menu .menu-item{align-items:center;}#astra-footer-menu .menu-item > a{padding-left:20px;padding-right:20px;}}@media (max-width:544px){.footer-widget-area[data-section="section-footer-menu"] .astra-footer-mobile-horizontal-menu{justify-content:center;}.footer-widget-area[data-section="section-footer-menu"] .astra-footer-mobile-vertical-menu{display:grid;}.footer-widget-area[data-section="section-footer-menu"] .astra-footer-mobile-vertical-menu .menu-item{align-items:center;}}.footer-widget-area[data-section="section-footer-menu"]{display:block;}@media (max-width:921px){.ast-header-break-point .footer-widget-area[data-section="section-footer-menu"]{display:block;}}@media (max-width:544px){.ast-header-break-point .footer-widget-area[data-section="section-footer-menu"]{display:block;}}
+</style>
+
+<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.mine35d.css?ver=6.3.2' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--ast-global-color-0: var(--ast-global-color-0);--wp--preset--color--ast-global-color-1: var(--ast-global-color-1);--wp--preset--color--ast-global-color-2: var(--ast-global-color-2);--wp--preset--color--ast-global-color-3: var(--ast-global-color-3);--wp--preset--color--ast-global-color-4: var(--ast-global-color-4);--wp--preset--color--ast-global-color-5: var(--ast-global-color-5);--wp--preset--color--ast-global-color-6: var(--ast-global-color-6);--wp--preset--color--ast-global-color-7: var(--ast-global-color-7);--wp--preset--color--ast-global-color-8: var(--ast-global-color-8);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}body { margin: 0;--wp--style--global--content-size: var(--wp--custom--ast-content-width-size);--wp--style--global--wide-size: var(--wp--custom--ast-wide-width-size); }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child:first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child:last-child { margin-block-end: 0; }body { --wp--style--block-gap: 24px; }:where(body .is-layout-flow)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-flow)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-flow)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-constrained)  > :first-child:first-child{margin-block-start: 0;}:where(body .is-layout-constrained)  > :last-child:last-child{margin-block-end: 0;}:where(body .is-layout-constrained)  > *{margin-block-start: 24px;margin-block-end: 0;}:where(body .is-layout-flex) {gap: 24px;}:where(body .is-layout-grid) {gap: 24px;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: none;}.wp-element-button, .wp-block-button__link{background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-ast-global-color-0-color{color: var(--wp--preset--color--ast-global-color-0) !important;}.has-ast-global-color-1-color{color: var(--wp--preset--color--ast-global-color-1) !important;}.has-ast-global-color-2-color{color: var(--wp--preset--color--ast-global-color-2) !important;}.has-ast-global-color-3-color{color: var(--wp--preset--color--ast-global-color-3) !important;}.has-ast-global-color-4-color{color: var(--wp--preset--color--ast-global-color-4) !important;}.has-ast-global-color-5-color{color: var(--wp--preset--color--ast-global-color-5) !important;}.has-ast-global-color-6-color{color: var(--wp--preset--color--ast-global-color-6) !important;}.has-ast-global-color-7-color{color: var(--wp--preset--color--ast-global-color-7) !important;}.has-ast-global-color-8-color{color: var(--wp--preset--color--ast-global-color-8) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-ast-global-color-0-background-color{background-color: var(--wp--preset--color--ast-global-color-0) !important;}.has-ast-global-color-1-background-color{background-color: var(--wp--preset--color--ast-global-color-1) !important;}.has-ast-global-color-2-background-color{background-color: var(--wp--preset--color--ast-global-color-2) !important;}.has-ast-global-color-3-background-color{background-color: var(--wp--preset--color--ast-global-color-3) !important;}.has-ast-global-color-4-background-color{background-color: var(--wp--preset--color--ast-global-color-4) !important;}.has-ast-global-color-5-background-color{background-color: var(--wp--preset--color--ast-global-color-5) !important;}.has-ast-global-color-6-background-color{background-color: var(--wp--preset--color--ast-global-color-6) !important;}.has-ast-global-color-7-background-color{background-color: var(--wp--preset--color--ast-global-color-7) !important;}.has-ast-global-color-8-background-color{background-color: var(--wp--preset--color--ast-global-color-8) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-ast-global-color-0-border-color{border-color: var(--wp--preset--color--ast-global-color-0) !important;}.has-ast-global-color-1-border-color{border-color: var(--wp--preset--color--ast-global-color-1) !important;}.has-ast-global-color-2-border-color{border-color: var(--wp--preset--color--ast-global-color-2) !important;}.has-ast-global-color-3-border-color{border-color: var(--wp--preset--color--ast-global-color-3) !important;}.has-ast-global-color-4-border-color{border-color: var(--wp--preset--color--ast-global-color-4) !important;}.has-ast-global-color-5-border-color{border-color: var(--wp--preset--color--ast-global-color-5) !important;}.has-ast-global-color-6-border-color{border-color: var(--wp--preset--color--ast-global-color-6) !important;}.has-ast-global-color-7-border-color{border-color: var(--wp--preset--color--ast-global-color-7) !important;}.has-ast-global-color-8-border-color{border-color: var(--wp--preset--color--ast-global-color-8) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='uag-style-8-css' href='wp-content/cache/min/1/wp-content/uploads/uag-plugin/assets/0/uag-css-8-1681936071183c.css?ver=1681936077' media='all' />
+<!--[if IE]>
+<script src='https://www.quietumplusi.com/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=3.9.4' id='astra-flexibility-js'></script>
+<script id="astra-flexibility-js-after">
+flexibility(document.documentElement);</script>
+<![endif]-->
+<link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/8.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<meta name="generator" content="WordPress 6.3.2" />
+<link rel='shortlink' href='index.html' />
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embede4be.json?url=https%3A%2F%2Fwww.quietumplusi.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed82e8?url=https%3A%2F%2Fwww.quietumplusi.com%2F&amp;format=xml" />
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+				(function(c,l,a,r,i,t,y){
+					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;
+					t.src="https://www.clarity.ms/tag/"+i+"?ref=wordpress";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "g86lhn18d7");
+		</script>
+		<style id="uagb-style-conditional-extension">@media (min-width: 1025px){body .uag-hide-desktop.uagb-google-map__wrap,body .uag-hide-desktop{display:none !important}}@media (min-width: 768px) and (max-width: 1024px){body .uag-hide-tab.uagb-google-map__wrap,body .uag-hide-tab{display:none !important}}@media (max-width: 767px){body .uag-hide-mob.uagb-google-map__wrap,body .uag-hide-mob{display:none !important}}</style><link rel="icon" href="wp-content/uploads/2023/03/cropped-Quietum-plus-favicon-32x32.webp" sizes="32x32" />
+<link rel="icon" href="wp-content/uploads/2023/03/cropped-Quietum-plus-favicon-192x192.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="wp-content/uploads/2023/03/cropped-Quietum-plus-favicon-180x180.webp" />
+<meta name="msapplication-TileImage" content="https://www.quietumplusi.com/wp-content/uploads/2023/03/cropped-Quietum-plus-favicon-270x270.webp" />
+		<style id="wp-custom-css">
+			.alpilean-price {
+	margin-top: -6px !important;
+}
+
+.hurry span {
+	background: #e43b2c;
+padding: 0px 10px!important;
+}
+
+.hurry {
+	margin-top: -6px !important;
+}
+
+/* Svg */
+.wp-block-button .wp-element-button svg{
+	width:59px;
+	
+}
+
+/* Link */
+.ast-article-single .wp-block-button a{
+	display:flex;
+	align-items:center;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-5 .wp-block-column .wp-container-3 .wp-block-button .wp-element-button svg{
+	height:auto !important;
+}
+
+/* Verified */
+ .verified{
+	margin-top:5px;
+}
+
+/* Customer */
+ .customer{
+	margin-top:8px !important;
+	
+}
+
+.customer-rev {
+		margin-top:8px !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-27 .wp-block-column p .check svg{
+	height:auto !important;
+}
+
+/* Svg */
+.ast-article-single p svg{
+	width:50px;
+}
+
+/* Paragraph */
+.wp-container-27 .wp-block-column p{
+	display:flex;
+	align-items:center;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-block-group .wp-container-35 .wp-block-column p svg{
+	height:auto !important;
+}
+
+/* Paragraph */
+.wp-container-35 .wp-block-column p{
+	display:flex;
+	align-items:flex-start;
+	
+}
+
+/* Paragraph */
+.ast-article-single .wp-container-34 p{
+	border-style:solid;
+	border-width:3px;
+	border-color:#f11400;
+	border-radius:15px;
+	
+}
+
+
+
+/* Block column */
+.icon-number{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+}
+
+
+
+/*--------------------------------Mobile----------------------*/
+/* 544px and smaller screen sizes */
+@media (max-width:544px){
+
+	/* Heading */
+	.ast-article-single h1{
+		font-size:38px !important;
+	}
+	
+	/* Paragraph */
+	.wp-container-5 .wp-block-column p{
+		font-size:19px !important;
+	}
+	
+	/* Strong Tag */
+	.wp-block-button .wp-element-button strong{
+		font-size:35px;
+	}
+	
+	/* Heading */
+	.wp-container-7 .wp-block-column h2{
+		font-size:35px !important;
+	}
+	
+	/* Heading */
+	.wp-container-14 .wp-block-column h2{
+		font-size:35px !important;
+	}
+	
+	/* Strong Tag */
+	.ast-article-single h3 strong{
+		font-size:35px;
+	}
+	
+	/* Heading */
+	.wp-container-25 .wp-block-column h2{
+		font-size:35px !important;
+	}
+	
+	/* Heading */
+	.wp-container-29 .wp-block-column h2{
+		font-size:35px !important;
+	}
+	
+	/* Strong Tag */
+	.wp-container-34 p strong{
+		font-size:19px;
+	}
+	
+	/* Heading */
+	.wp-container-38 .wp-block-column h2{
+		font-size:35px !important;
+	}
+	
+	/* Icon number */
+	.wp-container-60 .wp-block-column .wp-container-41 .icon-number{
+		justify-content:flex-start;
+	}
+	
+	/* Icon number */
+	.wp-container-60 .wp-block-column .wp-container-44 .icon-number{
+		justify-content:flex-start;
+	}
+	
+	/* Icon number */
+	.wp-container-60 .wp-block-column .wp-container-47 .icon-number{
+		justify-content:flex-start;
+	}
+	
+	/* Icon number */
+	.wp-container-60 .wp-block-column .wp-container-50 .icon-number{
+		justify-content:flex-start;
+	}
+	
+	/* Icon number */
+	.wp-container-60 .wp-block-column .wp-container-53 .icon-number{
+		justify-content:flex-start;
+	}
+	
+	/* Icon number */
+	.wp-container-60 .wp-block-column .wp-container-56 .icon-number{
+		justify-content:flex-start;
+	}
+	
+	/* Heading */
+	.wp-container-62 .wp-block-column h2{
+		font-size:35px !important;
+	}
+	
+	/* Strong Tag */
+	.ast-article-single h4 strong{
+		font-size:35px;
+	}
+	
+	/* Heading */
+	.wp-container-71 .wp-block-column h2{
+		font-size:35px !important;
+	}
+	
+	/* Strong Tag */
+	.wp-container-76 p strong{
+		font-size:19px;
+	}
+	
+	/* Heading */
+	.wp-container-80 .wp-block-column h2{
+		font-size:35px !important;
+		
+	}
+	
+}
+
+/* 544px and smaller screen sizes */
+@media (max-width:544px){
+
+	/* Heading */
+	.ast-article-single .wp-block-column h4{
+		line-height:1em;
+		
+	}
+	
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-block-group .wp-container-77 .wp-container-76 p svg{
+	height:auto !important;
+}
+
+/* Svg */
+.wp-container-76 p svg{
+	margin-bottom:-17px;
+	
+}
+
+/* Uagb icon list  wrap */
+.danger-icon{
+	background-color:#ffffff;
+	padding:30px;
+	
+}
+
+
+/*-------------------------------------Numbers Height CSS-----------------*/
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-41 .icon-number p svg{
+	height:auto !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-44 .icon-number p svg{
+	height:auto !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-47 .icon-number p svg{
+	height:auto !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-50 .icon-number p svg{
+	height:auto !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-53 .icon-number p svg{
+	height:auto !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-56 .icon-number p svg{
+	height:auto !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-59 .icon-number p svg{
+	height:auto !important;
+}
+
+/* Svg */
+#page #content .ast-container #primary #main .ast-article-single .entry-content .wp-container-66 .wp-block-column .wp-container-62 .icon-number p svg{
+	height:auto !important;
+}
+
+		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="home page-template-default page page-id-8 wp-custom-logo non-logged-in ast-single-post ast-mobile-inherit-site-logo ast-inherit-site-logo-transparent ast-hfb-header ast-desktop ast-plain-container ast-no-sidebar astra-3.9.4">
+
+<a
+	class="skip-link screen-reader-text"
+	href="#content"
+	role="link"
+	title="Skip to content">
+		Skip to content</a>
+
+<div
+class="hfeed site" id="page">
+			<header
+		class="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead"		>
+			<div id="ast-desktop-header" data-toggle-type="dropdown">
+		<div class="ast-main-header-wrap main-header-bar-wrap ">
+		<div class="ast-primary-header-bar ast-primary-header main-header-bar site-header-focus-item" data-section="section-primary-header-builder">
+						<div class="site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container" data-section="section-primary-header-builder">
+				<div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
+											<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
+									<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
+											<div
+				class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"				>
+					<span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home" aria-current="page"><img width="186" height="40" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20186%2040'%3E%3C/svg%3E" class="custom-logo" alt="Logo" decoding="async" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 1x, https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 2x" data-lazy-src="https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp" /><noscript><img width="186" height="40" src="wp-content/uploads/2023/03/Logo-1.webp" class="custom-logo" alt="Logo" decoding="async" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 1x, https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 2x" /></noscript></a></span>				</div>
+			<!-- .site-branding -->
+					</div>
+								</div>
+																									<div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+										<div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
+			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile"><li id="menu-item-416" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-416"><a href="#about-us" class="menu-link">About Us</a></li>
+<li id="menu-item-419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-419"><a href="#ingredients" class="menu-link">Ingredients</a></li>
+<li id="menu-item-424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-424"><a href="#faq" class="menu-link">FAQ</a></li>
+</ul></div></nav></div></div>		</div>
+				<div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
+			<div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" ><div class=ast-custom-button>Order Now</div></a><a class="menu-link" href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" >Order Now</a></div>		</div>
+									</div>
+												</div>
+					</div>
+								</div>
+			</div>
+	</div> <!-- Main Header Bar Wrap -->
+<div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
+		<div class="ast-main-header-wrap main-header-bar-wrap" >
+		<div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap site-header-focus-item ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default" data-section="section-primary-header-builder">
+									<div class="ast-builder-grid-row ast-grid-center-col-layout-only ast-flex ast-grid-center-col-layout">
+																			<div class="site-header-primary-section-center site-header-section ast-flex ast-grid-section-center">
+										<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
+											<div
+				class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"				>
+					<span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home" aria-current="page"><img width="186" height="40" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20186%2040'%3E%3C/svg%3E" class="custom-logo" alt="Logo" decoding="async" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 1x, https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 2x" data-lazy-src="https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp" /><noscript><img width="186" height="40" src="wp-content/uploads/2023/03/Logo-1.webp" class="custom-logo" alt="Logo" decoding="async" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 1x, https://www.quietumplusi.com/wp-content/uploads/2023/03/Logo-1.webp 2x" /></noscript></a></span>				</div>
+			<!-- .site-branding -->
+					</div>
+									</div>
+																	</div>
+						</div>
+	</div>
+	</div>
+		</header><!-- #masthead -->
+			<div id="content" class="site-content">
+		<div class="ast-container">
+		
+
+	<div id="primary" class="content-area primary">
+
+		
+					<main id="main" class="site-main">
+				<article
+class="post-8 page type-page status-publish ast-article-single" id="post-8" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+		<header class="entry-header ast-header-without-markup">
+		
+			</header><!-- .entry-header -->
+
+	<div class="entry-content clear"
+		ast-blocks-layout="true" itemprop="text"	>
+
+		
+		
+<h1 class="wp-block-heading has-text-align-center" style="margin-top:0px;font-size:44px;font-style:normal;font-weight:700"><mark style="background-color:rgba(0, 0, 0, 0);color:#748ea3" class="has-inline-color">Quietum Plus™</mark> Only $49/Bottle &#8211; Limited Time Offer</h1>
+
+
+
+<div class="wp-block-columns alignfull is-layout-flex wp-container-5 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:50%">
+<div class="wp-block-uagb-image uagb-block-11756608 wp-block-uagb-image--layout-default wp-block-uagb-image--effect-static wp-block-uagb-image--align-none"><figure class="wp-block-uagb-image__figure"><img width="599" height="443" decoding="async" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus.webp , https://www.quietumplusi.com/wp-content/uploads/2022/12/Protetox.webp 360w" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20599%20443'%3E%3C/svg%3E" alt="Quietum Plus" class="uag-image-1146" title="" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus.webp"/><noscript><img width="599" height="443" decoding="async" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus.webp , https://www.quietumplusi.com/wp-content/uploads/2022/12/Protetox.webp 360w" src="wp-content/uploads/2023/03/Quietum-Plus.webp" alt="Quietum Plus" class="uag-image-1146" title=""/></noscript></figure></div>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" fetchpriority="high" width="599" height="117" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20599%20117'%3E%3C/svg%3E" alt="Quietum Plus secured" class="wp-image-1147" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-secured.webp 599w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-secured-300x59.webp 300w" data-lazy-sizes="(max-width: 599px) 100vw, 599px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-secured.webp" /><noscript><img decoding="async" fetchpriority="high" width="599" height="117" src="wp-content/uploads/2023/03/Quietum-Plus-secured.webp" alt="Quietum Plus secured" class="wp-image-1147" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-secured.webp 599w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-secured-300x59.webp 300w" sizes="(max-width: 599px) 100vw, 599px" /></noscript></figure>
+
+
+
+<p class="has-text-align-center" style="font-size:32px"><strong>Get a <span style="color: #e43b2c">$300 OFF</span> TODAY discount on your order!</strong></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<p class="has-text-align-center" style="font-size:32px"><mark style="background-color:rgba(0, 0, 0, 0);color:#748ea3" class="has-inline-color">Quietum Plus</mark>™ is a hearing health supplement that can help you along with your hearing health. This mixture contains nutritious ingredients that can allow you to enhance your hearing, decrease your likelihood of age-related hearing problems, and help you relax.</p>
+
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+
+
+
+<p class="has-text-align-center" style="font-size:32px">Regular Price: <del>$297/per bottle</del></p>
+
+
+
+<p class="has-text-align-center alpilean-price has-text-color" style="color:#e43b2c;font-size:32px"><strong>Only for: $49/per bottle</strong></p>
+
+
+
+<p class="has-text-align-center hurry has-ast-global-color-5-color has-text-color" style="font-size:32px"><span><strong>HURRY UP!</strong></span></p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-3 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button has-custom-font-size" style="font-size:48px"><a class="wp-block-button__link has-ast-global-color-8-color has-text-color has-background wp-element-button" href="https://thequietumplus.com/text.php?aff_id=251459" style="border-radius:30px;background-color:#ffd10a" target="_blank" rel="noreferrer noopener"><strong>Order Now</strong>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m136.587 322.105h291.968c19.354 0 36.072-13.132 40.656-31.936l42.498-174.366c.873-3.578.054-7.358-2.222-10.255-2.275-2.896-5.754-4.587-9.437-4.587h-391.198l-16.891-70.931c-1.287-5.406-6.117-9.22-11.674-9.22h-50.236c-6.627 0-12 5.373-12 12s5.373 12 12 12h40.759l13.371 56.152h-72.232c-6.628 0-12 5.373-12 12s5.372 12 12 12h472.825l-38.881 159.523c-1.986 8.146-8.954 13.62-17.339 13.62h-291.967c-25.56 0-46.354 20.794-46.354 46.354 0 25.561 20.794 46.355 46.354 46.355h4.341c-18.755 7.936-31.948 26.524-31.948 48.136 0 28.805 23.435 52.239 52.239 52.239s52.238-23.434 52.238-52.239c0-21.612-13.192-40.2-31.947-48.136h230.026c-18.755 7.936-31.948 26.524-31.948 48.136 0 28.805 23.435 52.239 52.239 52.239s52.239-23.434 52.239-52.239c0-21.612-13.193-40.2-31.948-48.136h17.154c6.628 0 12-5.373 12-12s-5.372-12-12-12h-332.685c-12.326 0-22.354-10.028-22.354-22.355 0-12.325 10.028-22.354 22.354-22.354zm24.633 145.085c-15.571 0-28.239-12.668-28.239-28.239s12.668-28.239 28.239-28.239c15.57 0 28.238 12.668 28.238 28.239s-12.668 28.239-28.238 28.239zm270.608 0c-15.571 0-28.239-12.668-28.239-28.239s12.668-28.239 28.239-28.239 28.239 12.668 28.239 28.239-12.668 28.239-28.239 28.239zm-346.468-276.514c-6.627 0-12-5.373-12-12s5.373-12 12-12h146.572c6.627 0 12 5.373 12 12s-5.373 12-12 12zm80.109 65.715h-145.301c-6.627 0-12-5.373-12-12s5.373-12 12-12h145.301c6.627 0 12 5.373 12 12s-5.373 12-12 12z" fill="#000000" data-original="#000000" class=""></path></g></svg></a></div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-7 wp-block-columns-is-layout-flex" id="why-us" style="background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" style="font-size:48px;font-style:normal;font-weight:700">Why Choose Us?</h2>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-12 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="211" height="217" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20211%20217'%3E%3C/svg%3E" alt="Made In USA" class="wp-image-133" data-lazy-src="wp-content/uploads/2022/11/Made-In-USA.webp"/><noscript><img decoding="async" width="211" height="217" src="wp-content/uploads/2022/11/Made-In-USA.webp" alt="Made In USA" class="wp-image-133"/></noscript></figure>
+
+
+
+<h2 class="wp-block-heading has-text-align-center customer has-ast-global-color-8-color has-text-color" style="font-size:25px"><strong>Proudly Made In the USA</strong></h2>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px">Quietum Plus is manufactured in the USA </p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="211" height="217" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20211%20217'%3E%3C/svg%3E" alt="60 days money back guarantee" class="wp-image-623" data-lazy-src="wp-content/uploads/2022/12/60-days-money-back-guarantee.webp"/><noscript><img decoding="async" width="211" height="217" src="wp-content/uploads/2022/12/60-days-money-back-guarantee.webp" alt="60 days money back guarantee" class="wp-image-623"/></noscript></figure>
+
+
+
+<h2 class="wp-block-heading has-text-align-center customer has-ast-global-color-8-color has-text-color" style="font-size:25px"><strong>60 Days Money Back Guarantee</strong></h2>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px">Introducing a 60 Days Money Back Guarantee! We want to make sure that you&#8217;re always happy with our products and services.</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="211" height="217" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20211%20217'%3E%3C/svg%3E" alt="GMP certified" class="wp-image-626" data-lazy-src="wp-content/uploads/2022/12/gmp-certified.webp"/><noscript><img decoding="async" width="211" height="217" src="wp-content/uploads/2022/12/gmp-certified.webp" alt="GMP certified" class="wp-image-626"/></noscript></figure>
+
+
+
+<h2 class="wp-block-heading has-text-align-center customer has-ast-global-color-8-color has-text-color" style="font-size:25px"><strong>GMP Certified</strong></h2>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px">Quietum Plus is one of the companies that has been certified to be Good Manufacturing Practice Certified.</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="211" height="217" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20211%20217'%3E%3C/svg%3E" alt="all natural ingredients" class="wp-image-629" data-lazy-src="wp-content/uploads/2022/12/all-natural-ingredients.webp"/><noscript><img decoding="async" width="211" height="217" src="wp-content/uploads/2022/12/all-natural-ingredients.webp" alt="all natural ingredients" class="wp-image-629"/></noscript></figure>
+
+
+
+<h2 class="wp-block-heading has-text-align-center customer has-ast-global-color-8-color has-text-color" style="font-size:25px"><strong>All Natural Ingredients</strong></h2>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px">Quietum Plus is made with all-natural ingredients which means you can trust the product to be effective and safe.</p>
+</div>
+</div>
+
+
+
+<div id="customers" class="inherit-container-width wp-block-group has-border-color has-ast-global-color-6-border-color is-layout-constrained wp-block-group-is-layout-constrained" style="border-width:1px;border-radius:15px;padding-top:10px">
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-14 wp-block-columns-is-layout-flex" style="border-radius:10px;background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" style="font-size:48px;font-style:normal;font-weight:700">Quietum Plus Customers</h2>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-18 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full has-custom-border"><img decoding="async" width="234" height="234" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20234%20234'%3E%3C/svg%3E" alt="Customer Jake" class="has-border-color wp-image-1194" style="border-color:#748ea3;border-width:8px;border-radius:28px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Jake.webp 234w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Jake-150x150.webp 150w" data-lazy-sizes="(max-width: 234px) 100vw, 234px" data-lazy-src="wp-content/uploads/2023/03/Customer-Jake.webp" /><noscript><img decoding="async" width="234" height="234" src="wp-content/uploads/2023/03/Customer-Jake.webp" alt="Customer Jake" class="has-border-color wp-image-1194" style="border-color:#748ea3;border-width:8px;border-radius:28px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Jake.webp 234w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Jake-150x150.webp 150w" sizes="(max-width: 234px) 100vw, 234px" /></noscript></figure>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="353" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20353%2066'%3E%3C/svg%3E" alt="5 star rated" class="wp-image-938" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2.webp 353w, https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2-300x56.webp 300w" data-lazy-sizes="(max-width: 353px) 100vw, 353px" data-lazy-src="wp-content/uploads/2023/02/5-star-rated-2.webp" /><noscript><img decoding="async" width="353" height="66" src="wp-content/uploads/2023/02/5-star-rated-2.webp" alt="5 star rated" class="wp-image-938" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2.webp 353w, https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2-300x56.webp 300w" sizes="(max-width: 353px) 100vw, 353px" /></noscript></figure>
+
+
+
+<p class="has-text-align-center verified has-text-color has-medium-font-size" style="color:#2e9155"><strong>Verified Purchase</strong></p>
+
+
+
+<h2 class="wp-block-heading has-text-align-center customer has-text-color" style="color:#748ea3;font-size:25px"><b>&#8220;</b><strong>Jake</strong><strong> is fully satisfied with the Quietum Plus…&#8221;</strong></h2>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px">“I&#8217;ve been experiencing ringing in my right ear for some time and have ended up at the ENT to determine what is causing the problem. Within one week, this made my tinnitus nearly vanish altogether, and within the following week, it was entirely gone by. I am grateful that they&#8217;re not that expensive.”</p>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px"><em><strong>&#8211; Jake L., <em><strong><em><strong>Chicago</strong></em>, USA</strong></em></strong></em></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full has-custom-border"><img decoding="async" width="234" height="234" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20234%20234'%3E%3C/svg%3E" alt="Customer Lily" class="has-border-color wp-image-1195" style="border-color:#748ea3;border-width:8px;border-radius:28px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Lily.webp 234w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Lily-150x150.webp 150w" data-lazy-sizes="(max-width: 234px) 100vw, 234px" data-lazy-src="wp-content/uploads/2023/03/Customer-Lily.webp" /><noscript><img decoding="async" width="234" height="234" src="wp-content/uploads/2023/03/Customer-Lily.webp" alt="Customer Lily" class="has-border-color wp-image-1195" style="border-color:#748ea3;border-width:8px;border-radius:28px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Lily.webp 234w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Lily-150x150.webp 150w" sizes="(max-width: 234px) 100vw, 234px" /></noscript></figure>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="353" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20353%2066'%3E%3C/svg%3E" alt="5 star rated" class="wp-image-938" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2.webp 353w, https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2-300x56.webp 300w" data-lazy-sizes="(max-width: 353px) 100vw, 353px" data-lazy-src="wp-content/uploads/2023/02/5-star-rated-2.webp" /><noscript><img decoding="async" width="353" height="66" src="wp-content/uploads/2023/02/5-star-rated-2.webp" alt="5 star rated" class="wp-image-938" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2.webp 353w, https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2-300x56.webp 300w" sizes="(max-width: 353px) 100vw, 353px" /></noscript></figure>
+
+
+
+<p class="has-text-align-center verified has-text-color has-medium-font-size" style="color:#2e9155"><strong>Verified Purchase</strong></p>
+
+
+
+<h2 class="wp-block-heading has-text-align-center customer has-text-color" style="color:#748ea3;font-size:25px"><strong>&#8220;Lily</strong> <strong>can hear clearly once again…&#8221;</strong></h2>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px">“I have been dealing with Tinnitus for the past months. I only had a single bottle because I think that if I don&#8217;t see a difference after two to four weeks, it&#8217;s not for me. But I have to admit that I have ordered five more bottles. My Tinnitus issue has completely disappeared! All thanks to Quietum Plus.”</p>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px"><strong style="font-style: italic;">&#8211; Lily S.</strong><strong>,</strong> <em><strong>Atlanta, USA</strong></em></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full has-custom-border"><img decoding="async" width="234" height="234" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20234%20234'%3E%3C/svg%3E" alt="Customer Stephen" class="has-border-color wp-image-1193" style="border-color:#748ea3;border-width:8px;border-radius:28px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Stephen.webp 234w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Stephen-150x150.webp 150w" data-lazy-sizes="(max-width: 234px) 100vw, 234px" data-lazy-src="wp-content/uploads/2023/03/Customer-Stephen.webp" /><noscript><img decoding="async" width="234" height="234" src="wp-content/uploads/2023/03/Customer-Stephen.webp" alt="Customer Stephen" class="has-border-color wp-image-1193" style="border-color:#748ea3;border-width:8px;border-radius:28px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Stephen.webp 234w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Customer-Stephen-150x150.webp 150w" sizes="(max-width: 234px) 100vw, 234px" /></noscript></figure>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" width="353" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20353%2066'%3E%3C/svg%3E" alt="5 star rated" class="wp-image-938" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2.webp 353w, https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2-300x56.webp 300w" data-lazy-sizes="(max-width: 353px) 100vw, 353px" data-lazy-src="wp-content/uploads/2023/02/5-star-rated-2.webp" /><noscript><img decoding="async" width="353" height="66" src="wp-content/uploads/2023/02/5-star-rated-2.webp" alt="5 star rated" class="wp-image-938" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2.webp 353w, https://www.quietumplusi.com/wp-content/uploads/2023/02/5-star-rated-2-300x56.webp 300w" sizes="(max-width: 353px) 100vw, 353px" /></noscript></figure>
+
+
+
+<p class="has-text-align-center verified has-text-color has-medium-font-size" style="color:#2e9155"><strong>Verified Purchase</strong></p>
+
+
+
+<h2 class="wp-block-heading has-text-align-center customer has-text-color" style="color:#748ea3;font-size:25px"><strong>“Stephen believes that Quietum Plus is so effective&#8230;”</strong></h2>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px">“I have been taking Quintum Plus for 3 months. Before taking it, my ears were ringing, my head was painful, and my memory has been deteriorating.I remember the names of my daughter&#8217;s teammates, the buzz, and my migraines are gone. I went on vacation and started taking Quietum Plus daily. In a very few weeks, my hearing began to improve.”</p>
+
+
+
+<p class="has-text-align-center customer-rev" style="font-size:19px"><em><strong>&#8211; Stephen R., <em><strong>New York, USA</strong></em></strong></em></p>
+</div>
+</div>
+</div>
+
+
+
+<div class="inherit-container-width wp-block-group is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:10px">
+<div class="wp-block-columns is-layout-flex wp-container-22 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image size-full"><img decoding="async" width="362" height="273" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20362%20273'%3E%3C/svg%3E" alt="Quietum Plus full" class="wp-image-1150" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-full.webp 362w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-full-300x226.webp 300w" data-lazy-sizes="(max-width: 362px) 100vw, 362px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-full.webp" /><noscript><img decoding="async" width="362" height="273" src="wp-content/uploads/2023/03/Quietum-Plus-full.webp" alt="Quietum Plus full" class="wp-image-1150" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-full.webp 362w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-full-300x226.webp 300w" sizes="(max-width: 362px) 100vw, 362px" /></noscript></figure>
+
+
+
+<figure class="wp-block-image size-full has-custom-border"><img decoding="async" width="346" height="346" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20346%20346'%3E%3C/svg%3E" alt="Quietum Plus customers" class="has-border-color wp-image-1151" style="border-color:#748ea3;border-width:8px;border-radius:10px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-customers.webp 346w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-customers-300x300.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-customers-150x150.webp 150w" data-lazy-sizes="(max-width: 346px) 100vw, 346px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-customers.webp" /><noscript><img decoding="async" width="346" height="346" src="wp-content/uploads/2023/03/Quietum-Plus-customers.webp" alt="Quietum Plus customers" class="has-border-color wp-image-1151" style="border-color:#748ea3;border-width:8px;border-radius:10px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-customers.webp 346w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-customers-300x300.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-customers-150x150.webp 150w" sizes="(max-width: 346px) 100vw, 346px" /></noscript></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h2 class="wp-block-heading has-text-align-center has-text-color" id="about-us" style="color:#748ea3;font-size:38px"><strong>Know More About Quietum Plus</strong></h2>
+
+
+
+<p style="font-size:19px">Quietum Plus is a dietary supplement designed to facilitate ear and auditory health, improve hearing, and control overall brain health. It has been clinically proven to respond to the causes of hearing loss and help individuals cope with tinnitus. With Quietum Plus, individuals can enjoy the increased benefits of improved hearing and overall well-being.</p>
+
+
+
+<p style="font-size:19px">Quietium Plus helps decrease the symptoms of tinnitus. Tinnitus is a condition from which people suffer from regular ringing or throbbing sounds in the ears, causing them distress, concern, and difficulty sleeping. </p>
+
+
+
+<p style="font-size:19px">Quietum Plus is a natural supplement that contains vitamins, minerals, and herbs that have been clinically proven to relieve body pain, improve brain health, and improve circulation.</p>
+
+
+
+<p style="font-size:19px">Quietum Plus is a natural supplement that reduces the risk of unpleasant side effects compared to standard tinnitus treatments thanks to its all-natural approach to protecting your hearing. Unlike other supplements, this one is intended to improve your overall well-being by improving your utlility without accidentally harming your hearing. It is manufactured in an FDA-Registered Facility to ensure that you improve your overall health.</p>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-25 wp-block-columns-is-layout-flex" id="difference" style="background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" style="font-size:48px;font-style:normal;font-weight:700">How Is Quietum Plus Different?</h2>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns has-background is-layout-flex wp-container-27 wp-block-columns-is-layout-flex" style="background-color:#146e7300">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<p style="font-size:19px">Quientum Plus is unlike any other supplement that you&#8217;ve come across before.</p>
+
+
+
+<p style="font-size:19px">Quientum Plus improves blood flow in your ears and nourishes your hearing organs. The dietary supplement contains antioxidants, which attack free radicals and prevent oxidative stress, which is the primary reason why hearing generally declines with age.</p>
+
+
+
+<p style="font-size:19px">Cerumen is one of the important ingredients in Quietum Plus, as its objective includes blocking dangerous microorganisms from entering the ears and preventing ears from developing disorders and infections. Because of this, ear wax may actually be viewed as unpleasant for you, but it is actually made for proper ear function.</p>
+
+
+
+<p style="font-size:19px">Quietum Plus can also help you prevent damaging your inner ear elements, such as your eardrum and bones. Furthermore, it helps prevent the fluid found in the endolymph from thickening. By supplying potassium to your ears, the supplement in this way enhances your ability to hear. Hearing is basically a direct result of the enzyme action that leads to endolymph structuring.</p>
+
+
+
+<p style="font-size:19px">The brain is unable to associate familiar sounds with other sounds, which the brain goes on to utilize as a protective mechanism, which facilitates the development of tinnitus. Quietum Plus heals, restores, and repairs the ear-brain connections, enabling these connections to recover and enhance brain activity. As soon as this connection is restored, the functioning of the brain will be optimized, and electrical signals will be sent and received flawlessly.</p>
+
+
+
+<p style="font-size:19px">Here is a glance at few of the benefits of Quientum Plus:</p>
+
+
+
+<div class="wp-block-uagb-icon-list uagb-block-ddd5d410"><div class="uagb-icon-list__wrap">
+<div class="wp-block-uagb-icon-list-child uagb-block-d6315cda"><span class="uagb-icon-list__source-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"></path></svg></span><span class="uagb-icon-list__label">Quientum Plus supports healthy hearing.</span></div>
+
+
+
+<div class="wp-block-uagb-icon-list-child uagb-block-ad68bc33"><span class="uagb-icon-list__source-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"></path></svg></span><span class="uagb-icon-list__label">Quientum Plus consists of 100% all-natural ingredients.</span></div>
+
+
+
+<div class="wp-block-uagb-icon-list-child uagb-block-57401f61"><span class="uagb-icon-list__source-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"></path></svg></span><span class="uagb-icon-list__label">Quientum Plus can strengthen your Auditory Nerve Function and overall ear health.</span></div>
+
+
+
+<div class="wp-block-uagb-icon-list-child uagb-block-3e409931"><span class="uagb-icon-list__source-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"></path></svg></span><span class="uagb-icon-list__label">The Quientum Plus is quite simple to use and nearly impossible to interact with any kind of medicine.</span></div>
+
+
+
+<div class="wp-block-uagb-icon-list-child uagb-block-aa9fa6e6"><span class="uagb-icon-list__source-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"></path></svg></span><span class="uagb-icon-list__label">All Quientum Plus purchases are backed by a 60-day money back guarantee.</span></div>
+</div></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-29 wp-block-columns-is-layout-flex" style="background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" style="font-size:48px;font-style:normal;font-weight:700">Get Quietum Plus at a High Discount</h2>
+</div>
+</div>
+
+
+
+<div class="inherit-container-width wp-block-group alignfull has-background is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#eeeeee">
+<div class="wp-block-columns has-background is-layout-flex wp-container-33 wp-block-columns-is-layout-flex" style="background-color:#eeeeee">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full has-custom-border is-style-default"><a href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" rel="noreferrer noopener"><img decoding="async" width="357" height="686" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20357%20686'%3E%3C/svg%3E" alt="Quietum Plus 1 bottle" class="has-border-color wp-image-1155" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle-156x300.webp 156w" data-lazy-sizes="(max-width: 357px) 100vw, 357px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp" /><noscript><img decoding="async" width="357" height="686" src="wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp" alt="Quietum Plus 1 bottle" class="has-border-color wp-image-1155" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle-156x300.webp 156w" sizes="(max-width: 357px) 100vw, 357px" /></noscript></a></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-full has-custom-border"><a href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" rel="noreferrer noopener"><img decoding="async" width="350" height="713" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20350%20713'%3E%3C/svg%3E" alt="Quietum Plus 6 bottles" class="has-border-color wp-image-1154" style="border-color:#377c97;border-width:3px;border-radius:25px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp 350w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles-147x300.webp 147w" data-lazy-sizes="(max-width: 350px) 100vw, 350px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp" /><noscript><img decoding="async" width="350" height="713" src="wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp" alt="Quietum Plus 6 bottles" class="has-border-color wp-image-1154" style="border-color:#377c97;border-width:3px;border-radius:25px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp 350w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles-147x300.webp 147w" sizes="(max-width: 350px) 100vw, 350px" /></noscript></a></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-full has-custom-border"><a href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" rel="noreferrer noopener"><img decoding="async" width="357" height="686" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20357%20686'%3E%3C/svg%3E" alt="Quietum Plus 3 bottles" class="has-border-color wp-image-1153" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles-156x300.webp 156w" data-lazy-sizes="(max-width: 357px) 100vw, 357px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp" /><noscript><img decoding="async" width="357" height="686" src="wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp" alt="Quietum Plus 3 bottles" class="has-border-color wp-image-1153" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles-156x300.webp 156w" sizes="(max-width: 357px) 100vw, 357px" /></noscript></a></figure>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-35 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-container-34 wp-block-column-is-layout-flow" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
+<div class="wp-block-uagb-icon-list uagb-block-19da4309 danger-icon"><div class="uagb-icon-list__wrap">
+<div class="wp-block-uagb-icon-list-child uagb-block-84dfecf4"><span class="uagb-icon-list__source-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg></span><span class="uagb-icon-list__label"><strong>WARNING MAR-2023: Stock levels of Quietum Plus are limited Accept your reserved bottle above NOW before your DISCOUNT expires.</strong></span></div>
+</div></div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-38 wp-block-columns-is-layout-flex" style="background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" id="ingredients" style="font-size:48px;font-style:normal;font-weight:700">Quietum Plus Ingredients</h2>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-66 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<p style="font-size:19px">Manufacturing is conducted properly following the Quietum Plus process, according to the up-to-date conventions of industry, licensed GMP, and FDA-approved methods. It additionally follows additional security steps. Quietum Plus is made from all natural ingredients and does not have any risks to your health. With Quietum Plus you can enjoy your peace of mind.</p>
+
+
+
+<p style="font-size:19px"><strong>Quietum Plus is created from a blend of eight of the best rainforest superfoods and plants. This composition includes several ingredients listed below:</strong></p>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-41 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m256 6c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250zm52.075 374.689h-67.182v-192.865h-36.968v-56.513h104.15z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong>L-Tyrosine &amp; L-Arginine</strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">L-tyrosine and L-arginine are two highly popular amino acids that have arisen as promising options for ear health supplements. Both amino acids serve various ear- and general health-related purposes. L-tyrosine is a basic amino acid that provides the building blocks for neurotransmitters such as adrenaline, norepinephrine, and dopamine. L-arginine, on the other hand, is considered to be an amino acid that makes nitric oxide, a gas that generally helps relax vascular walls and increase blood flow to the body.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-44 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m256 6c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250zm92.738 377.871h-185.476v-15.18c100.338-118.344 114.158-137.469 114.158-158.879 0-13.522-8.909-22.59-21.682-22.59-14 0-22.535 9.442-22.535 24.454v4.824h-65.922v-4.613c0-50.423 33.05-83.753 87.651-83.753 52.9 0 89.423 32.524 89.423 79.343 0 31.381-11.61 55.471-64.947 117.254h69.33z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg>
+</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong>Vit. A, Vit. B &amp; Zinc</strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">The ears are one of several crucial organs that we largely rely on for hearing and maintaining the balance of the body. It is crucial to maintain ear health in order to avoid various hearing problems and related issues. Vitamins A and B, as well as zinc, are considered helpful for maintaining the health of your ears.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-47 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m256 6c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250zm-1.045 377.577c-53.591 0-90.432-34.981-91.931-86.6h64.009c.749 17.58 11.682 29.262 28.081 29.262 17.046 0 29-12.548 29-30.773s-12.388-29.536-31.795-29.536h-39.945v-13.9l40.608-66.763h-83.7v-56.844h171.118v11.457l-50.052 80.127c35.754 8.97 58.628 37.913 58.628 76.535 0 50.716-39.304 87.035-94.021 87.035z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg>
+</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong>Yin yang huo&nbsp;</strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">It belongs to the genus Epimedium, according to preliminary research. According to reports, it can be used to treat hay fever symptoms, arteriosclerosis problems. Additional study is needed before any conclusive statements can be made. Some people also say that it is potentially capable of improving the health of the brain.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-50 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m256 6c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250zm80.631 329.883v44.806h-64.081v-44.806h-119.716v-12.2l79.887-192.376h66.23l-61.767 148.7h39.885l14.631-54.923h44.933v54.924h22.534v55.875z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg>
+</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong>Catuaba powder</strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">The bark of the Brazilian rain forest is used to prepare catuabine. Catuabine (an alkaloid) is thought to be able to relieve or prevent a number of health conditions, insomnia, fatigue, fungal infections, infections, bronchitis, asthma, obesity, memory disorders, and skin cancer, according to studies. It also supports ear health.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-53 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m256 6c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250zm-.291 377.579c-54.342 0-92.636-35.783-92.636-86.387h63.963c0 16.932 11.9 29.045 28.673 29.045 16.4 0 28.355-12.548 28.355-29.435 0-17.91-12.549-30.138-30.834-30.138h-77.614l-6.364-8.239 13.93-130h147.855v56.844h-96.414l-3.142 28.455h23.2v.008c55.842 0 94.238 34.181 94.238 83.079.008 50.655-38.819 86.768-93.21 86.768z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong>Damiana</strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">Damiana is a shrub native to Texas, Mexico, Central America, and the Caribbean. Treatment for anemia, respiratory issues like bronchitis and cough, skin disease changes, and problems related to the digestive system, diabetes, fever, and fungal infections by low calcium levels can be reduced by this particular chemical compound. Furthermore, it also promotes our hearing.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-56 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m256 6c-138.071 0-250 111.929-250 250s111.929 250 250 250 250-111.929 250-250-111.929-250-250-250zm.216 377.577c-58.853 0-99.285-37.606-99.285-92.026 0-25.568 7.634-50.874 28.523-85.854l45.84-77.274h72.024c-16.418 27.518-33.016 54.9-49.468 82.4a108.965 108.965 0 0 1 16.5-1.211c49.909 0 84.718 33.421 84.718 81.624.001 54.679-40.328 92.341-98.852 92.341z" fill="#ffd10a" data-original="#000000" class=""></path><path d="m256 255.8c-20.2 0-34.842 14.363-34.842 35.431 0 20.853 14.637 35.059 34.842 35.059 20.42 0 34.841-14.206 34.841-35.059-.001-21.067-14.422-35.431-34.841-35.431z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong>Tribulus Terrestris</strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">In traditional Chinese medicine and Ayurvedic medicine, the roots of the small leafy plant Tribulus terrestris have been used to enhance urinary health, maintain urinary tract health, and reduce edema. According to pharmacies, this element in a compound evokes therapeutically useful psychogenic reactions: it protects individuals from the damaging impact of free radicals, helps certain areas of the brain, and triggers the release of beneficial oils.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-59 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M256 6C117.929 6 6 117.929 6 256s111.929 250 250 250 250-111.929 250-250S394.071 6 256 6zm95.757 135.038-94.5 239.651h-70.344l76.231-190.945h-102.9v-58.433h191.513z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong><strong>Dong Quai</strong></strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">A traditional Chinese herb called Dong Quai Dong Quai is utilized by females to reduce abdominal cramping and alleviate symptoms of menopause. In vitro research has also shown that it has hematological, pro-apoptotic, anti-metastatic, anti-tuberculosis, anti-cancer, and anti-tumor properties. On the other hand, animals and humans still hadn&#8217;t created the same results. It has been also proven to aid hearing issues.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-62 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:10%">
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M256.109 224.685c16.886 0 28.366-10.511 28.366-24.934s-11.48-24.93-28.366-24.93-28.579 10.511-28.579 24.93 11.693 24.934 28.579 24.934zM256.109 275.57c-20.16 0-33.514 12.173-33.514 29.651s13.354 29.649 33.514 29.649 33.3-12.169 33.3-29.649-13.14-29.651-33.3-29.651z" fill="#ffd10a" data-original="#000000" class=""></path><path d="M256 6C117.929 6 6 117.929 6 256s111.929 250 250 250 250-111.929 250-250S394.071 6 256 6zm-.109 380.755c-58.785 0-98.525-32.044-98.525-79.452 0-25.061 10.734-44.22 33.1-58.411-17.412-14.126-26.243-31.2-26.243-51.165 0-42.957 36.953-72.482 91.888-72.482s91.67 29.307 91.67 72.477c0 20.195-8.87 37.328-26.353 51.211 22.294 14.332 33.206 33.476 33.206 58.369 0 47.191-39.957 79.453-98.743 79.453z" fill="#ffd10a" data-original="#000000" class=""></path></g></svg></p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:90%">
+<p class="has-text-color" style="color:#748ea3;font-size:32px"><strong>Ashwagandha</strong></p>
+
+
+
+<p class="customer-rev" style="font-size:19px">The ashwagandha shrub has been utilized for centuries to boost the way the body handles pressure, anxiety, and helps ear health. It has been shown to reduce mental and physical symptoms of mental abnormalities like depression, psychosis, and bipolar disorder. However, 600 mg of ashwagandha need to be ingested at an appointed time to receive its benefits.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-64 wp-block-columns-is-layout-flex">
+<div class="wp-block-column icon-number is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:100%">
+<figure class="wp-block-image aligncenter size-full has-custom-border"><img decoding="async" width="1024" height="747" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20747'%3E%3C/svg%3E" alt="Quietum Plus Ingredients" class="wp-image-1159" style="border-radius:10px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-Ingredients.webp 1024w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-Ingredients-300x219.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-Ingredients-768x560.webp 768w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-Ingredients.webp" /><noscript><img decoding="async" width="1024" height="747" src="wp-content/uploads/2023/03/Quietum-Plus-Ingredients.webp" alt="Quietum Plus Ingredients" class="wp-image-1159" style="border-radius:10px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-Ingredients.webp 1024w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-Ingredients-300x219.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-Ingredients-768x560.webp 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="inherit-container-width wp-block-group is-layout-constrained wp-block-group-is-layout-constrained" style="border-style:none;border-width:0px;border-radius:15px;padding-top:10px">
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-68 wp-block-columns-is-layout-flex" style="border-radius:10px;background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" style="font-size:48px;font-style:normal;font-weight:700">Place an order and get two complimentary bonuses!</h2>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns has-border-color has-ast-global-color-6-border-color is-layout-flex wp-container-71 wp-block-columns-is-layout-flex" style="border-width:2px">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:50%">
+<figure class="wp-block-image size-full has-custom-border"><img decoding="async" width="1080" height="724" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201080%20724'%3E%3C/svg%3E" alt="Bonus1" class="has-border-color wp-image-1241" style="border-color:#748ea3;border-width:8px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1.webp 1080w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1-300x201.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1-1024x686.webp 1024w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1-768x515.webp 768w" data-lazy-sizes="(max-width: 1080px) 100vw, 1080px" data-lazy-src="wp-content/uploads/2023/03/Bonus1.webp" /><noscript><img decoding="async" width="1080" height="724" src="wp-content/uploads/2023/03/Bonus1.webp" alt="Bonus1" class="has-border-color wp-image-1241" style="border-color:#748ea3;border-width:8px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1.webp 1080w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1-300x201.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1-1024x686.webp 1024w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus1-768x515.webp 768w" sizes="(max-width: 1080px) 100vw, 1080px" /></noscript></figure>
+
+
+
+<p class="has-text-align-center has-text-color has-medium-font-size" style="color:#1bb2d0"><strong>Incentive 1: 1-Minute Natural Tips To Hear Like a Ninja</strong></p>
+
+
+
+<p class="has-text-align-center has-black-color has-text-color" style="font-size:25px"><strong><strong><strong><strong>Free</strong></strong></strong></strong></p>
+
+
+
+<p class="has-text-align-center" style="font-size:19px">Kickstart your Quietum Plus journey by using quick and efficient hacks that can do wonders in no time:</p>
+
+
+
+<ol style="font-size:19px">
+<li>Find out the 3 gentle yoga poses that boost your hearing and stop hearing loss in its track;</li>
+
+
+
+<li>The incredibly potent veggie that can restore cochlear damage and perfect hearing even after a blast exposure;</li>
+
+
+
+<li>The simple tip that makes sure your earbuds don’t cause hearing loss;</li>
+
+
+
+<li>Discover how heating up a seasoning can clear any ear infection overnight.</li>
+</ol>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:50%">
+<figure class="wp-block-image size-large has-custom-border"><img decoding="async" width="1024" height="686" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20686'%3E%3C/svg%3E" alt="Bonus2" class="has-border-color wp-image-1247" style="border-color:#748ea3;border-width:8px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2-1024x686.webp 1024w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2-300x201.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2-768x515.webp 768w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2.webp 1080w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="wp-content/uploads/2023/03/Bonus2-1024x686.webp" /><noscript><img decoding="async" width="1024" height="686" src="wp-content/uploads/2023/03/Bonus2-1024x686.webp" alt="Bonus2" class="has-border-color wp-image-1247" style="border-color:#748ea3;border-width:8px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2-1024x686.webp 1024w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2-300x201.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2-768x515.webp 768w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Bonus2.webp 1080w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<p class="has-text-align-center has-text-color has-medium-font-size" style="color:#1bb2d0"><strong>Incentive 2: How to Get the Best Sleep of Your Life in Just 7 Days</strong></p>
+
+
+
+<p class="has-text-align-center has-black-color has-text-color" style="font-size:25px"><strong><strong><strong><strong>Free</strong></strong></strong></strong></p>
+
+
+
+<p class="has-text-align-center" style="font-size:19px">In this limited edition book, you’ll find out all about:</p>
+
+
+
+<ol style="font-size:19px">
+<li>How easy it is to trick your mind into falling asleep in literal minutes with 3 odd but extremely efficient doctor- approved techniques;</li>
+
+
+
+<li>The simple adjustment to the position of your bed that will have you sleep like a baby all through the night;</li>
+
+
+
+<li>The 4 mouth and throat quick exercises that drastically reduce snoring;</li>
+
+
+
+<li>The 5 “heavy-sleep” pressure points that even long term insomniacs swear by.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+
+<div class="inherit-container-width wp-block-group is-layout-constrained wp-block-group-is-layout-constrained" style="border-style:none;border-width:0px;border-radius:15px;padding-top:10px">
+<div class="wp-block-columns has-border-color has-ast-global-color-6-border-color is-layout-flex wp-container-75 wp-block-columns-is-layout-flex" style="border-width:2px">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h3 class="wp-block-heading has-text-align-center has-text-color" style="color:#748ea3;font-size:48px"><strong>Satisfaction guaranteed: Get your money back if you&#8217;re not satisfied</strong></h3>
+
+
+
+<p class="has-text-align-center" style="font-size:19px">If you aren&#8217;t satisfied with the advantage Quietum Plus provides, we&#8217;re here to refund your money. You can contact us to initiate the refund process within 60 days of your purchase, even if you did not finish the entire bottle or have.</p>
+
+
+
+<p class="has-text-align-center" style="font-size:19px">This lets you have two whole months to ascertain whether Quietum Plus is what you need or not. We will not charge you any hidden or subscription fees. You are assured of a safe and secure purchase.</p>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" width="361" height="361" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20361%20361'%3E%3C/svg%3E" alt="Money back guarantee" class="wp-image-1203" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Money-back-guarantee-3.webp 361w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Money-back-guarantee-3-300x300.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Money-back-guarantee-3-150x150.webp 150w" data-lazy-sizes="(max-width: 361px) 100vw, 361px" data-lazy-src="wp-content/uploads/2023/03/Money-back-guarantee-3.webp" /><noscript><img decoding="async" width="361" height="361" src="wp-content/uploads/2023/03/Money-back-guarantee-3.webp" alt="Money back guarantee" class="wp-image-1203" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Money-back-guarantee-3.webp 361w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Money-back-guarantee-3-300x300.webp 300w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Money-back-guarantee-3-150x150.webp 150w" sizes="(max-width: 361px) 100vw, 361px" /></noscript></figure>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-78 wp-block-columns-is-layout-flex" style="background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" style="font-size:48px;font-style:normal;font-weight:700">Get Quietum Plus at a High Discount</h2>
+</div>
+</div>
+
+
+
+<div class="inherit-container-width wp-block-group alignfull has-background is-layout-constrained wp-block-group-is-layout-constrained" style="background-color:#eeeeee">
+<div class="wp-block-columns has-background is-layout-flex wp-container-82 wp-block-columns-is-layout-flex" style="background-color:#eeeeee">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image aligncenter size-full has-custom-border"><a href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" rel="noreferrer noopener"><img decoding="async" width="357" height="686" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20357%20686'%3E%3C/svg%3E" alt="Quietum Plus 1 bottle" class="has-border-color wp-image-1155" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle-156x300.webp 156w" data-lazy-sizes="(max-width: 357px) 100vw, 357px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp" /><noscript><img decoding="async" width="357" height="686" src="wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp" alt="Quietum Plus 1 bottle" class="has-border-color wp-image-1155" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-1-bottle-156x300.webp 156w" sizes="(max-width: 357px) 100vw, 357px" /></noscript></a></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-full has-custom-border"><a href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" rel="noreferrer noopener"><img decoding="async" width="350" height="713" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20350%20713'%3E%3C/svg%3E" alt="Quietum Plus 6 bottles" class="has-border-color wp-image-1154" style="border-color:#377c97;border-width:3px;border-radius:25px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp 350w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles-147x300.webp 147w" data-lazy-sizes="(max-width: 350px) 100vw, 350px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp" /><noscript><img decoding="async" width="350" height="713" src="wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp" alt="Quietum Plus 6 bottles" class="has-border-color wp-image-1154" style="border-color:#377c97;border-width:3px;border-radius:25px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles.webp 350w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-6-bottles-147x300.webp 147w" sizes="(max-width: 350px) 100vw, 350px" /></noscript></a></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<figure class="wp-block-image size-full has-custom-border"><a href="https://thequietumplus.com/text.php?aff_id=251459" target="_blank" rel="noreferrer noopener"><img decoding="async" width="357" height="686" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20357%20686'%3E%3C/svg%3E" alt="Quietum Plus 3 bottles" class="has-border-color wp-image-1153" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles-156x300.webp 156w" data-lazy-sizes="(max-width: 357px) 100vw, 357px" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp" /><noscript><img decoding="async" width="357" height="686" src="wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp" alt="Quietum Plus 3 bottles" class="has-border-color wp-image-1153" style="border-color:#c1c4ca;border-width:3px;border-radius:25px" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles.webp 357w, https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-3-bottles-156x300.webp 156w" sizes="(max-width: 357px) 100vw, 357px" /></noscript></a></figure>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-84 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-container-83 wp-block-column-is-layout-flow" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
+<div class="wp-block-uagb-icon-list uagb-block-13dd9be0 danger-icon"><div class="uagb-icon-list__wrap">
+<div class="wp-block-uagb-icon-list-child uagb-block-43b25240"><span class="uagb-icon-list__source-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg></span><span class="uagb-icon-list__label"><strong>WARNING MAR-2023: Stock levels of Quietum Plus are limited Accept your reserved bottle above NOW before your DISCOUNT expires.</strong></span></div>
+</div></div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns alignfull has-background is-layout-flex wp-container-87 wp-block-columns-is-layout-flex" style="background-color:#748ea3">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-text-align-center has-ast-global-color-5-color has-text-color" id="faq" style="font-size:48px;font-style:normal;font-weight:700">Quietum Plus FAQ</h2>
+</div>
+</div>
+
+
+
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-faq uagb-faq__outer-wrap uagb-block-4091920c uagb-faq-icon-row-reverse uagb-faq-layout-accordion uagb-faq-expand-first-true uagb-faq-inactive-other-true uagb-faq__wrap uagb-buttons-layout-wrap uagb-faq-equal-height" data-faqtoggle="true" role="tablist"><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","@id":"https://www.quietumplusi.com/","mainEntity":[{"@type":"Question","name":"&lt;strong>&lt;strong>Is Quietum Plus Safe?&lt;/strong>&lt;/strong>","acceptedAnswer":{"@type":"Answer","text":"Quietum Plus consists of only 100% natural components, making it a one-of-a-kind and safe supplement. Our quietude formula is used by large numbers of people daily, with no negative side effects. Quietum Plus consists of only organic products manufactured by our facility that is FDA- and GMP-certified. We abide by green standards for industrial safety."}},{"@type":"Question","name":"&lt;strong>&lt;strong>Is Quietum Plus right for me?&lt;/strong>&lt;/strong>","acceptedAnswer":{"@type":"Answer","text":"Quietum Plus has achieved comprehensive screening and examination of all the ingredients and substances it contains, in a gentle, FDA inspected, sterile manufacturing environment."}},{"@type":"Question","name":"&lt;strong>How Many Bottles Should I Order?&lt;/strong>","acceptedAnswer":{"@type":"Answer","text":"We recommend ordering the greatest order so you can stock up and ensure your entire body, brain, and ears take full advantage of the long-term benefits of Quietum Plus.&lt;br>As of now the product is currently in stock.Quietum Plus market participants are rapidly selling it, taking approximately 9 months approximately to replenish the supply as we only take the purest ingredients. Ordering the largest amount is also the best deal for you. You save over 50% by ordering the 6 bottles pack."}},{"@type":"Question","name":"&lt;strong>&lt;strong>What if Quietum Plus doesn’t work for me?&lt;/strong>&lt;/strong>","acceptedAnswer":{"@type":"Answer","text":"Quietum Plus is created with plant blends that are easy to source globally. Scientific research is the source of the product, and Quietum Plus is most beneficial for 99 percent of all consumers. However, this does not indicate that we aren't confident in its effectiveness. For that reason, we provide a full refund to anyone who is dissatisfied with the item during the first 60 days after purchase.&lt;br>If you need help our customer support stay available 24/7, and our representatives are happy to help you. You may always reach out to us and obtain a refund if our service doesn't meet your expectations."}},{"@type":"Question","name":"&lt;strong>&lt;strong>Where is Quietum Plus made?&lt;/strong>&lt;/strong>","acceptedAnswer":{"@type":"Answer","text":"Our supplements are produced in the United States of America in accordance with current production standards as well as FDA guidelines under the supervision of a pharmaceutical-grade manufacturing facility."}}]}</script>
+<div class="wp-block-uagb-faq-child uagb-faq-child__outer-wrap uagb-faq-item uagb-block-cd609efa" role="tab" tabindex="0"><div class="uagb-faq-questions-button uagb-faq-questions"><span class="uagb-icon uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg></span><span class="uagb-icon-active uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"></path></svg></span><span class="uagb-question"><strong><strong>Is Quietum Plus Safe?</strong></strong></span></div><p class="uagb-faq-content">Quietum Plus consists of only 100% natural components, making it a one-of-a-kind and safe supplement. Our quietude formula is used by large numbers of people daily, with no negative side effects. Quietum Plus consists of only organic products manufactured by our facility that is FDA- and GMP-certified. We abide by green standards for industrial safety.</p></div>
+
+
+
+<div class="wp-block-uagb-faq-child uagb-faq-child__outer-wrap uagb-faq-item uagb-block-a4dd9265" role="tab" tabindex="0"><div class="uagb-faq-questions-button uagb-faq-questions"><span class="uagb-icon uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg></span><span class="uagb-icon-active uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"></path></svg></span><span class="uagb-question"><strong><strong>Is Quietum Plus right for me?</strong></strong></span></div><p class="uagb-faq-content">Quietum Plus has achieved comprehensive screening and examination of all the ingredients and substances it contains, in a gentle, FDA inspected, sterile manufacturing environment.</p></div>
+
+
+
+<div class="wp-block-uagb-faq-child uagb-faq-child__outer-wrap uagb-faq-item uagb-block-f87728e0" role="tab" tabindex="0"><div class="uagb-faq-questions-button uagb-faq-questions"><span class="uagb-icon uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg></span><span class="uagb-icon-active uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"></path></svg></span><span class="uagb-question"><strong>How Many Bottles Should I Order?</strong></span></div><p class="uagb-faq-content">We recommend ordering the greatest order so you can stock up and ensure your entire body, brain, and ears take full advantage of the long-term benefits of Quietum Plus.<br>As of now the product is currently in stock.Quietum Plus market participants are rapidly selling it, taking approximately 9 months approximately to replenish the supply as we only take the purest ingredients. Ordering the largest amount is also the best deal for you. You save over 50% by ordering the 6 bottles pack.</p></div>
+
+
+
+<div class="wp-block-uagb-faq-child uagb-faq-child__outer-wrap uagb-faq-item uagb-block-b3c50700" role="tab" tabindex="0"><div class="uagb-faq-questions-button uagb-faq-questions"><span class="uagb-icon uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg></span><span class="uagb-icon-active uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"></path></svg></span><span class="uagb-question"><strong><strong>What if Quietum Plus doesn’t work for me?</strong></strong></span></div><p class="uagb-faq-content">Quietum Plus is created with plant blends that are easy to source globally. Scientific research is the source of the product, and Quietum Plus is most beneficial for 99 percent of all consumers. However, this does not indicate that we aren&#8217;t confident in its effectiveness. For that reason, we provide a full refund to anyone who is dissatisfied with the item during the first 60 days after purchase.<br>If you need help our customer support stay available 24/7, and our representatives are happy to help you. You may always reach out to us and obtain a refund if our service doesn&#8217;t meet your expectations.</p></div>
+
+
+
+<div class="wp-block-uagb-faq-child uagb-faq-child__outer-wrap uagb-faq-item uagb-block-6ecbc7cd" role="tab" tabindex="0"><div class="uagb-faq-questions-button uagb-faq-questions"><span class="uagb-icon uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path></svg></span><span class="uagb-icon-active uagb-faq-icon-wrap"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"></path></svg></span><span class="uagb-question"><strong><strong>Where is Quietum Plus made?</strong></strong></span></div><p class="uagb-faq-content">Our supplements are produced in the United States of America in accordance with current production standards as well as FDA guidelines under the supervision of a pharmaceutical-grade manufacturing facility.</p></div>
+</div>
+
+
+
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-container uagb-block-9f5be8eb alignfull uagb-is-root-container">
+<div class="wp-block-uagb-advanced-heading uagb-block-9defb559"><h2 class="uagb-heading-text"><strong>Hurry Before You Miss This Opportunity! Order Now</strong></h2></div>
+
+
+
+<div class="wp-block-uagb-image uagb-block-846ad792 wp-block-uagb-image--layout-default wp-block-uagb-image--effect-static wp-block-uagb-image--align-center"><figure class="wp-block-uagb-image__figure"><img width="704" height="495" decoding="async" data-lazy-srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-free-shipping.webp " src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20704%20495'%3E%3C/svg%3E" alt="Quietum Plus free shipping" class="uag-image-1164" title="" data-lazy-src="wp-content/uploads/2023/03/Quietum-Plus-free-shipping.webp"/><noscript><img width="704" height="495" decoding="async" srcset="https://www.quietumplusi.com/wp-content/uploads/2023/03/Quietum-Plus-free-shipping.webp " src="wp-content/uploads/2023/03/Quietum-Plus-free-shipping.webp" alt="Quietum Plus free shipping" class="uag-image-1164" title=""/></noscript></figure></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading uagb-block-b9925df4"><h2 class="uagb-heading-text">Regular Price: <del>$297/per bottle</del></h2></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading uagb-block-316d5d45"><h2 class="uagb-heading-text"><strong>Only for: $49/per bottle</strong></h2></div>
+
+
+
+<div class="wp-block-uagb-marketing-button uagb-marketing-btn__align-center uagb-marketing-btn__align-text-center uagb-marketing-btn__icon-after uagb-block-f45684d7 wp-block-button"><a href="https://thequietumplus.com/text.php?aff_id=251459" class="uagb-marketing-btn__link wp-block-button__link" target="_blank" rel="noopener noreferrer"><span class="uagb-marketing-btn__title">Order Now</span><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 24C0 10.75 10.75 0 24 0H96C107.5 0 117.4 8.19 119.6 19.51L121.1 32H312V134.1L288.1 111C279.6 101.7 264.4 101.7 255 111C245.7 120.4 245.7 135.6 255 144.1L319 208.1C328.4 218.3 343.6 218.3 352.1 208.1L416.1 144.1C426.3 135.6 426.3 120.4 416.1 111C407.6 101.7 392.4 101.7 383 111L360 134.1V32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24V24zM224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464zM416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464z"></path></svg></a></div>
+</div>
+
+		
+		
+	</div><!-- .entry-content .clear -->
+
+	
+	
+</article><!-- #post-## -->
+
+			</main><!-- #main -->
+			
+		
+	</div><!-- #primary -->
+
+
+	</div> <!-- ast-container -->
+	</div><!-- #content -->
+<footer
+class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
+			<div class="site-above-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-above-footer-builder">
+	<div class="ast-builder-grid-row-container-inner">
+					<div class="ast-builder-footer-grid-columns site-above-footer-inner-wrap ast-builder-grid-row">
+											<div class="site-footer-above-section-1 site-footer-section site-footer-section-1">
+								<div class="footer-widget-area widget-area site-footer-focus-item" data-section="section-footer-menu">
+				<div class="footer-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility footer-navigation" id="footer-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="footer-nav-wrap"><ul id="astra-footer-menu" class="ast-nav-menu ast-flex astra-footer-horizontal-menu astra-footer-tablet-vertical-menu astra-footer-mobile-vertical-menu"><li id="menu-item-1212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1212"><a href="#why-us" class="menu-link">Why Us?</a></li>
+<li id="menu-item-1213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1213"><a href="#customers" class="menu-link">Customers</a></li>
+<li id="menu-item-1214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1214"><a href="#about-us" class="menu-link">Know More</a></li>
+<li id="menu-item-1215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1215"><a href="#difference" class="menu-link">Quietum Plus&#8217;s Difference</a></li>
+<li id="menu-item-1216" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1216"><a href="#ingredients" class="menu-link">Ingredients</a></li>
+<li id="menu-item-1217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1217"><a href="#faq" class="menu-link">FAQ</a></li>
+<li id="menu-item-1238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1238"><a target="_blank" rel="noopener" href="privacy-policy/index.html" class="menu-link">Privacy Policy</a></li>
+<li id="menu-item-1239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1239"><a target="_blank" rel="noopener" href="terms-of-use/index.html" class="menu-link">Terms of Use</a></li>
+</ul></div></nav></div>			</div>
+							</div>
+										</div>
+			</div>
+
+</div>
+<div class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-primary-footer-builder">
+	<div class="ast-builder-grid-row-container-inner">
+					<div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
+											<div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
+							<div class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-1" data-section="section-fb-html-1">
+			<div class="ast-header-html inner-link-style-"><div class="ast-builder-html-element"><p style="text-align: center;"><strong>FDA Compliance</strong></p>
+<p style="text-align: center;">All content and information found on this page are for informational purposes only and are not intended to diagnose, treat, cure or prevent any disease. The FDA hasn't evaluated the statements provided on this page. Make sure you consult with a licensed doctor before taking any supplement or making any changes to your diet or exercise plan. Individual results may vary.</p>
+<p style="text-align: center;">The display of third-party trademarks and trade names on this site does not necessarily indicate any affiliation or endorsements of our website. If you click a merchant link and buy a product or service on their website, we may be paid a fee by the merchant.</p>
+</div></div>		</div>
+						</div>
+										</div>
+			</div>
+
+</div>
+<div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
+	<div class="ast-builder-grid-row-container-inner">
+					<div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+											<div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+								<div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder">
+				<div class="ast-footer-copyright"><p>Copyright &copy; 2023 Quietum Plus™.</p>
+</div>			</div>
+						</div>
+										</div>
+			</div>
+
+</div>
+	</footer><!-- #colophon -->
+	</div><!-- #page -->
+<style id='core-block-supports-inline-css'>
+.wp-container-3.wp-container-3{justify-content:center;align-items:center;}.wp-container-5.wp-container-5,.wp-container-7.wp-container-7,.wp-container-12.wp-container-12,.wp-container-14.wp-container-14,.wp-container-18.wp-container-18,.wp-container-22.wp-container-22,.wp-container-25.wp-container-25,.wp-container-27.wp-container-27,.wp-container-29.wp-container-29,.wp-container-33.wp-container-33,.wp-container-35.wp-container-35,.wp-container-38.wp-container-38,.wp-container-41.wp-container-41,.wp-container-44.wp-container-44,.wp-container-47.wp-container-47,.wp-container-50.wp-container-50,.wp-container-53.wp-container-53,.wp-container-56.wp-container-56,.wp-container-59.wp-container-59,.wp-container-62.wp-container-62,.wp-container-64.wp-container-64,.wp-container-66.wp-container-66,.wp-container-68.wp-container-68,.wp-container-71.wp-container-71,.wp-container-75.wp-container-75,.wp-container-78.wp-container-78,.wp-container-82.wp-container-82,.wp-container-84.wp-container-84,.wp-container-87.wp-container-87{flex-wrap:nowrap;}.wp-container-34.wp-container-34 > *,.wp-container-83.wp-container-83 > *{margin-block-start:0;margin-block-end:0;}.wp-container-34.wp-container-34.wp-container-34.wp-container-34 > * + *,.wp-container-83.wp-container-83.wp-container-83.wp-container-83 > * + *{margin-block-start:0px;margin-block-end:0;}
+</style>
+<script id='astra-theme-js-js-extra'>
+var astra = {"break_point":"921","isRtl":""};
+</script>
+<script type="rocketlazyloadscript" src='wp-content/themes/astra/assets/js/minified/frontend.minf3c8.js?ver=3.9.4' id='astra-theme-js-js' defer></script>
+<script type="rocketlazyloadscript" src='wp-content/plugins/custom-plugin/assets/js/faq.min488e.js?ver=2.0.14' id='uagb-faq-js-js' defer></script>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id='rocket-preload-links-js-extra'>
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.quietumplusi.com","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("index.html")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("index.html")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+			<script type="rocketlazyloadscript">
+			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+			</script>
+			<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>	</body>
+
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1698051962 -->
